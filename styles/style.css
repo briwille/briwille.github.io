@@ -121,25 +121,27 @@ div.card-body, .card-title, .card-text {
 }
 
 /* The Overlap Hero */
-.hero {
-    position: relative;
-    height: 600px;
+.hero-container {
+    position: relative; /* This creates the "anchor" for the layers */
+    width: 100%;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    background-color: #f9f9f9; /* Match the light background */
 }
 
-.hero-text {
+.background-name {
     position: absolute;
-    font-size: 15rem;
-    color: #ff85c1; /* Pink color */
-    z-index: 1;
-    font-family: "Belleza", sans-serif;
+    font-family: 'belleza', sans-serif; /* Use a script font */
+    font-size: 25vw; /* Sizes the text based on screen width */
+    color: #ff6ec7; /* That specific neon pink */
+    z-index: 1;    /* Lower number = Back */
+    white-space: nowrap;
 }
 
-.hero-image {
+.foreground-image {
     position: relative;
-    z-index: 2;
-    height: 100%;
+    height: 100%;  /* Makes her tall like the photo */
+    z-index: 2;    /* Higher number = Front */
 }
