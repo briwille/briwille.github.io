@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&display=swap');
 
+/* Apply Belleza to the whole site as the default */
+body {
+    font-family: 'Belleza', sans-serif;
+    text-transform: uppercase; /* Most of your text is in caps */
+    letter-spacing: 1px;
+}
 
+/* Apply Give You Glory to the big name behind you */
+.background-name {
+    font-family: 'Give You Glory', crossorigin;
+    font-size: 250px;
+    color: #FF69B4;
+    text-transform: none; /* Keep the handwriting look natural */
+}
+
+/* Specific styling for the 'MY WORK' title */
+.section-title {
+    font-family: 'Belleza', sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
 
 /* Hero Section */
 .hero-section {
