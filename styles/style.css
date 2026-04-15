@@ -31,3 +31,81 @@ ul {
 ul li {
     margin-bottom: 1rem;
 }
+
+.belleza-regular {
+  font-family: "Belleza", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.belleza-regular {
+  font-family: "Belleza", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Hero Section */
+.hero-section {
+background: url(../images/catkeryboard.webp);
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+color: pink
+}
+
+.bg-light {
+    background-color: red;
+}
+.hero-section h1 {
+    font-size 700;
+}
+
+.hero-section .lead {
+    font-size 1.5rem
+}
+
+.work-card img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+
+/* carousel *
+/* div.carousel-item img {
+	aspect-ratio: 16/;
+object-fit: cover;
+object-fit: cover;}
+*/
+
+.carousel-inner img {
+    width: 100%;
+    aspect-ratio: 16/9
+    object-fit: cvover;
+}
+
+h2 {
+    font-weight: 700;
+    color: hotpink
+}
+
+.belleza-regular {
+    background: var(--text-color)
+    border: none;
+    font family: .belleza-regular;
+    font-weight: 900
+    font-size: 12px
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 112px
+}
+div.card {
+    border: none;
+    background-color: transparent
+}
+
+div.card-body, .card-title, .card-text {
+    color: var(--text-color);
+
+}
