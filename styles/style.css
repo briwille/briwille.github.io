@@ -111,3 +111,35 @@ div.card-body, .card-title, .card-text {
     color: var(--text-color);
 
 }
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* The Overlap Hero */
+.hero {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-text {
+    position: absolute;
+    font-size: 15rem;
+    color: #ff85c1; /* Pink color */
+    z-index: 1;
+    font-family: "Belleza", sans-serif;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
