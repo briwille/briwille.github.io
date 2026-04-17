@@ -28,7 +28,8 @@
             font-size: 150px; /* Adjust size as needed */
             color: #ff6ec7;   /* Pink color from your photo */
             position: absolute;
-            z-index: 1;
+            /* CHANGED: z-index 2 puts the text on TOP */
+            z-index: 2; 
         }
 
         /* Styling to make the hero section layout work */
@@ -37,12 +38,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 500px;
+            height: 600px; /* Increased height to fit your new photo better */
         }
 
         .hero-image {
             position: relative;
-            z-index: 2;
+            /* CHANGED: z-index 1 puts the photo BEHIND */
+            z-index: 1;
             height: 100%;
         }
     </style>
@@ -58,7 +60,7 @@
 
     <header class="hero">
         <h1 class="hero-text">BRI Wille</h1>
-        <img src="your-photo.png" alt="Profile" class="hero-image">
+        <img src="BriannaWille-5.webp" alt="Profile" class="hero-image">
     </header>
 
     <div class="container py-5">

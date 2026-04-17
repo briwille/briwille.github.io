@@ -6,12 +6,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
-    font-family: 'Belleza', sans-serif; /* Default font for the whole site */
-    text-transform: uppercase;
+    font-family: 'Belleza', sans-serif;
     letter-spacing: 1px;
 }
 
-/* 3. Navigation Bar (Uses Belleza) */
+/* 3. Navigation Bar */
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -20,72 +19,56 @@ body {
 }
 
 .navbar a {
-    font-family: 'Belleza', sans-serif;
+    font-family: 'Belleza', sans-serif !important;
     text-decoration: none;
     color: #333;
     font-size: 14px;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* 4. Hero Section (The Layering) */
+/* 4. Hero Section (The Layering Magic) */
 .hero {
-    position: relative;
-    height: 600px;
+    position: relative; /* Anchor for the absolute text */
+    height: 600px;      /* Height of your photo area */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-color: #f9f9f9;
 }
 
-/* The Big Pink Name - Uses Momo Signature */
+/* The Big Pink Name */
 .hero-text {
     position: absolute;
     font-family: 'Momo Signature', cursive; 
-    font-size: 18rem;
-    color: #ff85c1;
-    z-index: 1;    /* Sits BEHIND the image */
+    font-size: 12vw; /* Adjust this to make the name bigger or smaller */
+    color: #ff6ec7;  /* Your pink color */
+    z-index: 2;      /* Sits ON TOP of the image */
     margin: 0;
     white-space: nowrap;
-    text-transform: none; /* Keeps handwriting looking natural */
-    -webkit-text-stroke: 1px #ff85c1; /* Makes the thin script easier to see */
+    text-transform: none;
+    /* Optional: helps text pop against the photo */
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); 
 }
 
-/* The Portrait Image */
+/* The Photo Code */
 .hero-image {
     position: relative;
-    z-index: 2;    /* Sits IN FRONT of the text */
-    height: 100%;
+    z-index: 1;      /* Sits BEHIND the text */
+    height: 100%;    /* Fills the hero height */
+    width: auto;
     object-fit: contain;
+    display: block;
 }
 
-/* 5. Content Styling */
-.bio {
+/* 5. Lower Content Styling */
+.container {
     text-align: center;
-    padding: 50px 0;
-}
-
-.designer-tag {
-    display: inline-block;
-    border: 1px solid #333;
-    padding: 5px 20px;
-    border-radius: 20px;
-    font-size: 12px;
-    margin-bottom: 20px;
-}
-
-.bio h2 {
     font-family: 'Belleza', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
 }
 
-.bio span {
-    font-weight: 700; /* Makes "kinda" and "thing" bold */
-}
-
-.section-title {
+h1 {
     font-family: 'Belleza', sans-serif;
-    font-size: 5rem;
-    margin-top: 100px;
-    font-weight: 400;
+    text-transform: uppercase;
 }
