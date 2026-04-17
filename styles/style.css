@@ -1,39 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&display=swap');
-<style>
+/* 1. Import Fonts at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&family=Momo+Signature&display=swap');
 
-/* Apply Belleza to the whole site as the default */
-body {
-    font-family: 'Belleza', sans-serif;
-    text-transform: uppercase; /* Most of your text is in caps */
-    letter-spacing: 1px;
-}
-
-/* Apply Give You Glory to the big name behind you */
-.background-name {
-    font-family: 'Give You Glory', crossorigin;
-    font-size: 250px;
-    color: #FF69B4;
-    text-transform: none; /* Keep the handwriting look natural */
-}
-
-/* Specific styling for the 'MY WORK' title */
-.section-title {
-    font-family: 'Belleza', sans-serif;
-    font-size: 4rem;
-    font-weight: 400;
-.background-name {
-    font-family: 'Give You Glory', cursive;
-    -webkit-text-stroke: 1px #FF69B4; /* This makes the lines a bit thicker */
-}
-/* General Setup */
+/* 2. General Page Setup */
 body {
     margin: 0;
     padding: 0;
     background-color: #fff;
-    font-family: 'Belleza', sans-serif; /* Clean font for the whole site */
+    font-family: 'Belleza', sans-serif; /* Default font for the whole site */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Navigation */
+/* 3. Navigation Bar (Uses Belleza) */
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -42,13 +20,14 @@ body {
 }
 
 .navbar a {
+    font-family: 'Belleza', sans-serif;
     text-decoration: none;
     color: #333;
     font-size: 14px;
     letter-spacing: 2px;
 }
 
-/* Hero Section Layering */
+/* 4. Hero Section (The Layering) */
 .hero {
     position: relative;
     height: 600px;
@@ -58,24 +37,28 @@ body {
     overflow: hidden;
 }
 
+/* The Big Pink Name - Uses Momo Signature */
 .hero-text {
     position: absolute;
-    font-family: 'Give You Glory', cursive; /* Your handwriting font */
+    font-family: 'Momo Signature', cursive; 
     font-size: 18rem;
-    color: #ff85c1; /* That vibrant pink */
-    z-index: 1;    /* Sits behind the image */
+    color: #ff85c1;
+    z-index: 1;    /* Sits BEHIND the image */
     margin: 0;
     white-space: nowrap;
+    text-transform: none; /* Keeps handwriting looking natural */
+    -webkit-text-stroke: 1px #ff85c1; /* Makes the thin script easier to see */
 }
 
+/* The Portrait Image */
 .hero-image {
     position: relative;
-    z-index: 2;    /* Sits in front of the text */
+    z-index: 2;    /* Sits IN FRONT of the text */
     height: 100%;
     object-fit: contain;
 }
 
-/* Lower Section Styling */
+/* 5. Content Styling */
 .bio {
     text-align: center;
     padding: 50px 0;
@@ -91,31 +74,18 @@ body {
 }
 
 .bio h2 {
+    font-family: 'Belleza', sans-serif;
     font-size: 2.5rem;
     font-weight: 400;
 }
 
 .bio span {
-    font-weight: 700; /* Makes "kinda" and "thing" bold like your photo */
+    font-weight: 700; /* Makes "kinda" and "thing" bold */
 }
 
 .section-title {
+    font-family: 'Belleza', sans-serif;
     font-size: 5rem;
     margin-top: 100px;
     font-weight: 400;
-}
-.momo-signature-regular {
-  font-family: "Momo Signature", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-/* For the Big Pink Name (The script font) */
-.hero-text {
-    font-family: 'Momo Signature', cursive; 
-    /* Use 'Momo Signature here instead if you prefer that look */
-}
-
-/* For the Navigation and "MY WORK" (The clean serif font) */
-.navbar a, .section-title {
-    font-family: 'Belleza', sans-serif;
 }
