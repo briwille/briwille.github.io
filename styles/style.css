@@ -189,7 +189,7 @@ h1 {
 }
 
 .social-link img {
-    width: 35px;              /* Set the size of your icons */
+    width: 65px;              /* Set the size of your icons */
     height: auto;
     opacity: 0.6;             /* Makes them that soft gray color */
     transition: all 0.3s ease; /* Smooth transition for the hover */
@@ -199,4 +199,13 @@ h1 {
 .social-link img:hover {
     opacity: 1;               /* Turns full black/color on hover */
     transform: scale(1.1);    /* Slightly grows */
+}
+.social-icons-container {
+    display: flex;            
+    justify-content: center;   
+    
+    /* You might want to increase the gap if the icons are bigger */
+    gap: 40px;                
+    
+    margin-top: 40px;         
 }
