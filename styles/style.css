@@ -83,21 +83,6 @@ h1 {
     padding: 100px 0;       /* Adds space above and below, adjust as needed */
 }
 
-/* 2. Style the 'Bri Wille' font */
-.hero-font {
-    grid-area: 1 / 1;          /* Tells CSS to put this element in cell 1,1 */
-    color: #FF00FF;           /* Set the font to your hot pink color */
-    font-family: 'Belleza', sans-serif; /* Example font from your User Summary */
-    font-size: 15rem;          /* Very large size for hero effect */
-    letter-spacing: -5px;     /* Optional: Adds designed letter overlap */
-    margin: 0;
-    line-height: 1;
-    white-space: nowrap;      /* Prevents 'Bri Wille' from breaking into two lines */
-    
-    /* THE MAGIC KEY: Brings the text to the FRONT */
-    z-index: 10;
-}
-
 /* 3. Style the transparent photo */
 .hero-photo {
     grid-area: 1 / 1;          /* Tells CSS to put the photo in the EXACT same spot */
