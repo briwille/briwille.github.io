@@ -1,7 +1,8 @@
-/* 1. Import Fonts at the very top */
+/* =========================================
+   1. FONTS & GENERAL SETUP
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&family=Momo+Signature&display=swap');
 
-/* 2. General Page Setup */
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +11,9 @@ body {
     letter-spacing: 1px;
 }
 
-/* 3. Navigation Bar */
+/* =========================================
+   2. NAVIGATION BAR
+   ========================================= */
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -27,81 +30,23 @@ body {
     text-transform: uppercase;
 }
 
-/* 4. Hero Section (The Layering Magic) */
-.hero {
-    position: relative; /* Anchor for the absolute text */
-    height: 600px;      /* Height of your photo area */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: #f9f9f9;
-}
-
-/* The Big Pink Name */
-.hero-text {
-    position: absolute;
-    font-family: 'Momo Signature', cursive; 
-    font-size: 12vw; /* Adjust this to make the name bigger or smaller */
-    color: #ff6ec7;  /* Your pink color */
-    z-index: 2;      /* Sits ON TOP of the image */
-    margin: 0;
-    white-space: nowrap;
-    text-transform: none;
-    /* Optional: helps text pop against the photo */
-    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4); 
-}
-
-/* The Photo Code */
-.hero-image {
-    position: relative;
-    z-index: 1;      /* Sits BEHIND the text */
-    height: 100%;    /* Fills the hero height */
-    width: auto;
-    object-fit: contain;
-    display: block;
-}
-
-/* 5. Lower Content Styling */
-.container {
-    text-align: center;
-    font-family: 'Belleza', sans-serif;
-}
-
-h1 {
-    font-family: 'Belleza', sans-serif;
-    text-transform: uppercase;
-}
-/* 1. Make the container fill the space */
+/* =========================================
+   3. HERO SECTION (GRID LAYERING)
+   ========================================= */
 .hero-container {
-    display: grid;              /* Use grid for perfect layering */
-    grid-template-columns: 1fr; /* One single central column */
-    place-items: center;       /* Centers all content vertically and horizontally */
-    position: relative;        /* Necessary for responsive stacking */
-    overflow: hidden;         /* Prevents cropping issues */
-    background: #FDF1F7;     /* Set the background color to match your pink aesthetic */
-    padding: 100px 0;       /* Adds space above and below, adjust as needed */
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    background: #FDF1F7;
+    padding: 100px 0;
 }
 
-/* 3. Style the transparent photo */
-.hero-photo {
-    grid-area: 1 / 1;          /* Tells CSS to put the photo in the EXACT same spot */
-    width: 90;               /* Adjust to set how much the photo covers the font */
-    max-width: 1000px;         /* Prevents the image from getting too massive */
-    position: relative;
-    
-    /* THE MAGIC KEY: Pushes the photo to the BACK */
-    z-index: 1;
-}
 .hero-font {
-    /* This connects to the Belleza font in your @import link */
-    font-family: 'Belleza', sans-serif; 
-    
-    /* Layering styles from our previous step */
     grid-area: 1 / 1;
     z-index: 10;
-    
-    /* Styling to match your aesthetic */
+    font-family: 'Belleza', sans-serif; 
     color: #FF00FF; 
     font-size: 15rem;
     text-transform: uppercase;
@@ -109,32 +54,66 @@ h1 {
     line-height: 1;
     white-space: nowrap;
 }
+
+.hero-photo {
+    grid-area: 1 / 1;
+    z-index: 1;
+    width: 90%; /* Fixed: added % */
+    max-width: 1000px;
+    position: relative;
+}
+
+/* =========================================
+   4. TAGLINE & DESIGNER SECTION
+   ========================================= */
 .tagline-section {
     position: relative;
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #ffffff; /* Or your preferred background */
+    text-align: center; /* Keeps main text centered */
+    padding: 100px 20px;
+    background-color: #ffffff;
     overflow: hidden;
 }
 
+/* Updated to allow side-alignment for the tag */
+.designer-tag-container {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 50px;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+    /* To push to the left side, use: */
+    margin-right: auto; 
+}
+
+.designer-text {
+    font-family: 'Belleza', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+
 .tagline-text {
-    font-family: 'Belleza', sans-serif; /* Your main clean font */
+    font-family: 'Belleza', sans-serif;
     font-size: 2.5rem;
     color: #000;
     margin: 0 auto;
     max-width: 800px;
 }
 
-/* This handles the bolding of specific words */
 .bold-text {
-    font-weight: 900; /* Extra bold */
-    text-transform: uppercase; /* For 'SOCIAL' */
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-/* Positioning the leopard prints */
+/* =========================================
+   5. DECORATIONS (LEOPARD PRINTS)
+   ========================================= */
 .leopard-accent {
     position: absolute;
-    width: 150px; /* Adjust based on your image size */
+    width: 150px;
     z-index: 1;
 }
 
@@ -147,36 +126,15 @@ h1 {
     bottom: 0;
     left: 0;
 }
-/* 1. Container for the whole section (review) */
-.tagline-section {
-    position: relative;
-    text-align: left;
-    padding: 100px 20px; /* Increased top padding to match design */
-    overflow: hidden;
+
+/* =========================================
+   6. MISC / FALLBACKS
+   ========================================= */
+.container {
+    text-align: center;
 }
 
-/* 2. Style for the pill-shaped designer tag */
-.designer-tag-container {
-    display: inline-flex;       /* Puts icon and text in a line */
-    align-items: left;       /* Vertically centers them */
-    border: 2px solid #333;    /* Fine black border */
-    border-radius: 50px;      /* Creates the curved pill shape */
-    padding: 10px 25px;       /* Adds space inside the border */
-    margin-bottom: 30px;      /* Adds space *before* the tagline text */
-}
-
-/* Style for the text inside the tag */
-.designer-text {
-    font-family: 'Belleza', sans-serif; /* Your clean, professional font */
-    font-size: 1rem;
-    color: #333;
-    text-transform: uppercase;  /* Forces uppercase like in your design */
-    letter-spacing: 1px;       /* Optional: Spaced out for design polish */
-    margin-left: 10px;         /* Space between icon and text */
-}
-
-/* Style for the tiny icon (optional) */
-.designer-icon {
-    font-size: 0.8rem;
-    opacity: 0.7;             /* Make it slightly subtle */
+h1 {
+    font-family: 'Belleza', sans-serif;
+    text-transform: uppercase;
 }
