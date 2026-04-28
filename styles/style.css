@@ -189,7 +189,7 @@ h1 {
 }
 
 .social-link img {
-    width: 200px;              /* Set the size of your icons */
+    width: 160px;              /* Set the size of your icons */
     height: auto;
     opacity: 0.6;             /* Makes them that soft gray color */
     transition: all 0.3s ease; /* Smooth transition for the hover */
