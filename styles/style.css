@@ -72,3 +72,39 @@ h1 {
     font-family: 'Belleza', sans-serif;
     text-transform: uppercase;
 }
+/* 1. Make the container fill the space */
+.hero-container {
+    display: grid;              /* Use grid for perfect layering */
+    grid-template-columns: 1fr; /* One single central column */
+    place-items: center;       /* Centers all content vertically and horizontally */
+    position: relative;        /* Necessary for responsive stacking */
+    overflow: hidden;         /* Prevents cropping issues */
+    background: #FDF1F7;     /* Set the background color to match your pink aesthetic */
+    padding: 100px 0;       /* Adds space above and below, adjust as needed */
+}
+
+/* 2. Style the 'Bri Wille' font */
+.hero-font {
+    grid-area: 1 / 1;          /* Tells CSS to put this element in cell 1,1 */
+    color: #FF00FF;           /* Set the font to your hot pink color */
+    font-family: 'Belleza', sans-serif; /* Example font from your User Summary */
+    font-size: 15rem;          /* Very large size for hero effect */
+    letter-spacing: -5px;     /* Optional: Adds designed letter overlap */
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;      /* Prevents 'Bri Wille' from breaking into two lines */
+    
+    /* THE MAGIC KEY: Brings the text to the FRONT */
+    z-index: 10;
+}
+
+/* 3. Style the transparent photo */
+.hero-photo {
+    grid-area: 1 / 1;          /* Tells CSS to put the photo in the EXACT same spot */
+    width: 60%;               /* Adjust to set how much the photo covers the font */
+    max-width: 600px;         /* Prevents the image from getting too massive */
+    position: relative;
+    
+    /* THE MAGIC KEY: Pushes the photo to the BACK */
+    z-index: 1;
+}
