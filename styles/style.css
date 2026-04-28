@@ -131,11 +131,35 @@ h1 {
     text-transform: uppercase; /* For 'SOCIAL' */
 }
 
-/* Positioning the leopard prints */
+.tagline-section {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #ffffff;
+    /* CHANGE THIS: allows the leopard print to 'hang' off the edge if needed */
+    overflow: visible; 
+}
+
 .leopard-accent {
     position: absolute;
-    width: 300px; /* Adjust based on your image size */
+    width: 180px; /* Adjust size to your liking */
     z-index: 1;
+    /* This prevents the image from being 'clickable' so it doesn't block your links */
+    pointer-events: none; 
+}
+
+/* Position the left leopard print near the word SOCIAL */
+.bottom-left {
+    bottom: 20%;      /* Moves it up from the very bottom */
+    left: 5%;        /* Moves it in from the very left edge */
+    transform: rotate(-15deg); /* Optional: adds that organic tilted look from your design */
+}
+
+/* Position the right leopard print near the word THING */
+.top-right {
+    top: 10%;
+    right: 5%;
+    transform: rotate(10deg);
 }
 
 .top-right {

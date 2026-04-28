@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brianna Wille | Portfolio</title>
     
+    <meta name="description" content="Explore the creative journey of Brianna Wille. This portfolio showcases a collection of professional work, offering a deep dive into her design evolution, unique identity, and creative vision.">
+    
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     
     <meta property="og:title" content="Brianna Wille | Portfolio">
@@ -13,69 +15,115 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://briannawille.github.io/">
 
-</head>
-<body>
-    </body>
-</html>
-    
-    <meta name="description" content="Explore the creative journey of Brianna Wille. This portfolio showcases a collection of 
-    professional work spanning several years, offering a deep dive into her design evolution, unique identity, and creative vision.">
-<head>
-  <meta property="og:image" content="https://briannawille.github.io/images/brithumbnail.webp">
-  <meta property="og:image" content="Brianna Wille | Portfolio">
-  <meta property="og:image" content="Explore the creative work and design identity of Brianna Wille.">
-</head>
-<body>
-    </body>
-</html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brianna Wille</title>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&family=Momo+Signature&display=swap');
-    </style>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./styles/style.css" rel="stylesheet">
 
     <style>
-        /* This makes the Navbar use Belleza */
+        @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&family=Momo+Signature&display=swap');
+
+        /* 1. Navbar Setup */
         .navbar a {
             font-family: 'Belleza', sans-serif !important;
             text-decoration: none;
             color: black;
             padding: 10px;
+            font-size: 14px;
+            letter-spacing: 2px;
         }
 
-        /* This makes "BRI Wille" use Momo Signature */
-        .hero-text {
-            font-family: 'Momo Signature', cursive;
-            font-size: 150px; /* Adjust size as needed */
-            color: #ff6ec7;   /* Pink color from your photo */
-            position: absolute;
-            /* CHANGED: z-index 2 puts the text on TOP */
-            z-index: 2; 
-        }
-
-        /* Styling to make the hero section layout work */
-        .hero {
+        /* 2. Hero Section Stacking */
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
             position: relative;
+            overflow: hidden;
+            background: #FDF1F7;
+            padding: 100px 0;
+        }
+
+        .hero-font {
+            grid-area: 1 / 1;
+            z-index: 10;
+            font-family: 'Momo Signature', cursive; /* Using your signature font */
+            color: #ff6ec7; 
+            font-size: 150px;
+            margin: 0;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        .hero-photo {
+            grid-area: 1 / 1;
+            z-index: 1;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        /* 3. Tagline & Cheetah Section */
+        .tagline-section {
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #ffffff;
+            /* CHANGED: visible ensures the cheetah doesn't get cut off */
+            overflow: visible; 
+        }
+
+        .designer-tag-container {
+            display: inline-flex;
+            align-items: center;
+            border: 2px solid #333;
+            border-radius: 50px;
+            padding: 10px 25px;
+            margin-bottom: 30px;
+        }
+
+        .tagline-text {
+            font-family: 'Belleza', sans-serif;
+            font-size: 2.5rem;
+            color: #000;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .bold-text { font-weight: 900; text-transform: uppercase; }
+
+        /* 4. Cheetah Positioning Fixes */
+        .leopard-accent {
+            position: absolute;
+            width: 180px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .top-right {
+            top: 0;
+            right: 0;
+        }
+
+        .bottom-left {
+            /* FIXED: These values move the cheetah toward 'SOCIAL' */
+            bottom: 10%;
+            left: 5%; 
+        }
+
+        /* 5. Social Icons */
+        .social-icons-container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 600px; /* Increased height to fit your new photo better */
+            gap: 40px;
+            padding-bottom: 50px;
         }
 
-        .hero-image {
-            position: relative;
-            /* CHANGED: z-index 1 puts the photo BEHIND */
-            z-index: 1;
-            height: 100%;
+        .social-link img {
+            width: 55px;
+            opacity: 0.6;
+            transition: 0.3s;
         }
+
+        .social-link img:hover { opacity: 1; transform: scale(1.1); }
     </style>
 </head>
 
@@ -88,50 +136,32 @@
     </nav>
 
     <header class="hero-container"> 
-    <h1 class="hero-font">BRI WILLE</h1>
-    <img src="images/transparentbricover.webp" alt="Brianna Wille" class="hero-photo">
-    
-</header>
+        <h1 class="hero-font">BRI WILLE</h1>
+        <img src="images/transparentbricover.webp" alt="Brianna Wille" class="hero-photo">
+    </header>
 
-<section class="tagline-section">
-    <img src="images/leopard-top.png" class="leopard-accent top-right" alt="">
+    <section class="tagline-section">
+        <img src="images/Cheetahprint.webp" class="leopard-accent top-right" alt="">
+        <img src="images/Cheetahprint.webp" class="leopard-accent bottom-left" alt="">
 
-    <div class="designer-tag-container">
-        <span class="designer-icon">🔍</span>
-        
-        <span class="designer-text">designer</span>
-    </div>
+        <div class="designer-tag-container">
+            <span class="designer-icon">🔍</span>
+            <span class="designer-text">designer</span>
+        </div>
 
-    <p class="tagline-text">
-        <span class="bold-text">SOCIAL</span> media is <span class="bold-text">kinda</span> my <span class="bold-text">thing</span>
-    </p>
-</section>
-<section class="tagline-section">
-    <img src="images/Cheetahprint.webp" class="leopard-accent top-right" alt="">
+        <p class="tagline-text">
+            <span class="bold-text">SOCIAL</span> media is <span class="bold-text">kinda</span> my <span class="bold-text">thing</span>
+        </p>
 
+        <div class="social-icons-container">
+            <a href="#" target="_blank" class="social-link"><img src="images/instagramicon.webp" alt="Instagram"></a>
+            <a href="#" target="_blank" class="social-link"><img src="images/tiktokicon.webp" alt="TikTok"></a>
+            <a href="#" target="_blank" class="social-link"><img src="images/linkedinicon.webp" alt="LinkedIn"></a>
+            <a href="#" target="_blank" class="social-link"><img src="images/facebookicon.webp" alt="Facebook"></a>
+            <a href="#" target="_blank" class="social-link"><img src="images/pinteresticon.webp" alt="Pinterest"></a>
+        </div>
+    </section>
 
-    <img src="images/Cheetahprint.webp" class="leopard-accent bottom-left" alt="">
-
-</section>
-    <div class="social-icons-container">
-    <a href="https://instagram.com/yourprofile" target="_blank" class="social-link">
-        <img src="images/instagramicon.webp" alt="Instagram">
-    </a>
-
-    <a href="https://tiktok.com/@yourprofile" target="_blank" class="social-link">
-        <img src="images/tiktokicon.webp" alt="TikTok">
-    </a>
-
-    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">
-        <img src="images/linkedinicon.webp" alt="LinkedIn">
-    </a>
-
-    <a href="https://facebook.com/yourprofile" target="_blank" class="social-link">
-        <img src="images/facebookicon.webp" alt="Facebook">
-    </a>
-
-    <a href="https://pinterest.com/yourprofile" target="_blank" class="social-link">
-        <img src="images/pinteresticon.webp" alt="Pinterest">
-    </a>
-</div>
+</body>
+</html>
 
