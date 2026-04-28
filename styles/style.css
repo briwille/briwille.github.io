@@ -179,14 +179,27 @@ h1 {
     overflow: hidden;
 }
 
-/* 2. Style for the pill-shaped designer tag */
+/* Update your designer container styles */
 .designer-tag-container {
-    display: inline-flex;       /* Puts icon and text in a line */
-    align-items: left;       /* Vertically centers them */
-    border: 2px solid #333;    /* Fine black border */
-    border-radius: 50px;      /* Creates the curved pill shape */
-    padding: 10px 25px;       /* Adds space inside the border */
-    margin-bottom: 30px;      /* Adds space *before* the tagline text */
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 50px;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+    
+    /* ADD THIS: Pushes it to the left */
+    margin-right: auto; 
+    margin-left: 50px; /* Adjust this to move it further in/out */
+}
+
+.tagline-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps text centered while tag moves */
+    position: relative;
+    padding: 100px 20px;
+    overflow: visible;
 }
 
 /* Style for the text inside the tag */
