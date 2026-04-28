@@ -180,3 +180,23 @@ h1 {
     font-size: 0.8rem;
     opacity: 0.7;             /* Make it slightly subtle */
 }
+.social-icons-container {
+    display: flex;            /* Lined up in a row */
+    justify-content: center;   /* Centered under the text */
+    gap: 30px;                /* Space between each icon */
+    margin-top: 40px;         /* Distance from the tagline above */
+    padding-bottom: 50px;
+}
+
+.social-link img {
+    width: 35px;              /* Set the size of your icons */
+    height: auto;
+    opacity: 0.6;             /* Makes them that soft gray color */
+    transition: all 0.3s ease; /* Smooth transition for the hover */
+}
+
+/* Hover Effect: When you move your mouse over them, they darken and grow slightly */
+.social-link img:hover {
+    opacity: 1;               /* Turns full black/color on hover */
+    transform: scale(1.1);    /* Slightly grows */
+}
