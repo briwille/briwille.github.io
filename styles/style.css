@@ -142,7 +142,7 @@ h1 {
 
 .leopard-accent {
     position: absolute;
-    width: 180px; /* Adjust size to your liking */
+    width: 200px; /* Adjust size to your liking */
     z-index: 1;
     /* This prevents the image from being 'clickable' so it doesn't block your links */
     pointer-events: none; 
