@@ -134,7 +134,7 @@ h1 {
 /* Positioning the leopard prints */
 .leopard-accent {
     position: absolute;
-    width: 150px; /* Adjust based on your image size */
+    width: 600px; /* Adjust based on your image size */
     z-index: 1;
 }
 
