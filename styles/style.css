@@ -109,3 +109,41 @@ h1 {
     line-height: 1;
     white-space: nowrap;
 }
+.tagline-section {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff; /* Or your preferred background */
+    overflow: hidden;
+}
+
+.tagline-text {
+    font-family: 'Belleza', sans-serif; /* Your main clean font */
+    font-size: 2.5rem;
+    color: #000;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* This handles the bolding of specific words */
+.bold-text {
+    font-weight: 900; /* Extra bold */
+    text-transform: uppercase; /* For 'SOCIAL' */
+}
+
+/* Positioning the leopard prints */
+.leopard-accent {
+    position: absolute;
+    width: 150px; /* Adjust based on your image size */
+    z-index: 1;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
