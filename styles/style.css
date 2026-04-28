@@ -155,29 +155,28 @@ h1 {
     overflow: hidden;
 }
 
-/* This wrapper stretches the full width of the site */
-.designer-alignment-wrapper {
-    display: flex;
-    justify-content: flex-start; /* This pushes the content to the LEFT side */
-    padding-left: 50px;          /* Adjust this to move it further from the edge */
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-/* Your pill-shaped tag (Keep your existing styles, just add this) */
+/* 2. Style for the pill-shaped designer tag */
 .designer-tag-container {
-    display: inline-flex;
-    align-items: center;
-    border: 2px solid #333;
-    border-radius: 50px;
-    padding: 8px 20px;
-    background-color: white; /* Keeps it readable over backgrounds */
+    display: inline-flex;       /* Puts icon and text in a line */
+    align-items: center;       /* Vertically centers them */
+    border: 2px solid #333;    /* Fine black border */
+    border-radius: 50px;      /* Creates the curved pill shape */
+    padding: 10px 25px;       /* Adds space inside the border */
+    margin-bottom: 30px;      /* Adds space *before* the tagline text */
 }
 
-/* This ensures your tagline stays centered regardless of the tag above it */
-.tagline-text {
-    text-align: center;
-    width: 100%;
-    font-family: 'Belleza', sans-serif;
-    font-size: 2.5rem;
+/* Style for the text inside the tag */
+.designer-text {
+    font-family: 'Belleza', sans-serif; /* Your clean, professional font */
+    font-size: 1rem;
+    color: #333;
+    text-transform: uppercase;  /* Forces uppercase like in your design */
+    letter-spacing: 1px;       /* Optional: Spaced out for design polish */
+    margin-left: 10px;         /* Space between icon and text */
+}
+
+/* Style for the tiny icon (optional) */
+.designer-icon {
+    font-size: 0.8rem;
+    opacity: 0.7;             /* Make it slightly subtle */
 }
