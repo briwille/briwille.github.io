@@ -225,13 +225,23 @@ h1 {
     padding-bottom: 50px;
 }
 
-.social-link img {
-    width: 160px;              /* Set the size of your icons */
-    height: auto;
-    opacity: 0.6;             /* Makes them that soft gray color */
-    transition: all 0.3s ease; /* Smooth transition for the hover */
+.leopard-accent {
+    position: absolute;
+    /* INCREASED SIZE */
+    width: 250px; 
+    z-index: 0;
+    pointer-events: none;
 }
 
+.bottom-left {
+    bottom: 5%;
+    left: 2%; /* Moves it slightly in from the corner */
+}
+
+.top-right {
+    top: 5%;
+    right: 2%;
+}
 /* Hover Effect: When you move your mouse over them, they darken and grow slightly */
 .social-link img:hover {
     opacity: 1;               /* Turns full black/color on hover */
