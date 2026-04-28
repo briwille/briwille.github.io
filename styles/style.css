@@ -86,8 +86,8 @@ h1 {
 /* 3. Style the transparent photo */
 .hero-photo {
     grid-area: 1 / 1;          /* Tells CSS to put the photo in the EXACT same spot */
-    width: 90;               /* Adjust to set how much the photo covers the font */
-    max-width: 1000px;         /* Prevents the image from getting too massive */
+    width: 100;               /* Adjust to set how much the photo covers the font */
+    max-width: 2000px;         /* Prevents the image from getting too massive */
     position: relative;
     
     /* THE MAGIC KEY: Pushes the photo to the BACK */
