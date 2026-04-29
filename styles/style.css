@@ -97,7 +97,7 @@ body {
 /* 4. Cheetah Positioning Fixes */
 .leopard-accent {
     position: absolute;
-    width: 250px;
+    width: 100px;
     z-index: 0;
     pointer-events: none;
 }
@@ -122,7 +122,7 @@ body {
 }
 
 .social-link img {
-    width: 55px;
+    width: 80px;
     opacity: 0.6;
     transition: 0.3s;
 }
