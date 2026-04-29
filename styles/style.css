@@ -513,7 +513,7 @@ h1 {
 
 /* The actual image icon */
 .card-image {
-    width: 60%;            /* Adjust this to make the icon look smaller or larger inside the circle */
+    width: 100%;            /* Adjust this to make the icon look smaller or larger inside the circle */
     height: auto;
     display: block;
 }
