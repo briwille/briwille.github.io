@@ -4,140 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brianna Wille | Portfolio</title>
-    
-    <meta name="description" content="Explore the creative journey of Brianna Wille. This portfolio showcases a collection of professional work, offering a deep dive into her design evolution, unique identity, and creative vision.">
-    
+
+    <meta name="description" content="Explore the creative journey of Brianna Wille. This portfolio showcases a collection of professional work, design evolution, creative identity, and social media vision.">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
+
     <meta property="og:title" content="Brianna Wille | Portfolio">
     <meta property="og:description" content="Explore the creative work and identity of Brianna Wille.">
     <meta property="og:image" content="https://briannawille.github.io/images/brithumbnail.webp">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://briannawille.github.io/">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&family=Momo+Signature&display=swap" rel="stylesheet">
     <link href="./styles/style.css" rel="stylesheet">
-
-    <!-- <style>
-        @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&family=Momo+Signature&display=swap');
-
-        
-    </style> -->
 </head>
-
 <body>
-    <nav class="navbar d-flex justify-content-around border-bottom py-3">
-        <a href="#">HOME</a>
-        <a href="#">MY WORK</a>
-        <a href="#">ABOUT ME</a>
-        <a href="#">CONTACT</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#work">My Work</a>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <header class="hero-container"> 
-        <h1 class="hero-font">BRI WILLE</h1>
-        <img src="images/transparentbricover.webp" alt="Brianna Wille" class="hero-photo">
-    </header>
+    <main id="home">
+        <header class="hero">
+            <img src="images/transparentbricover.webp" alt="Brianna Wille" class="hero-photo">
+            <h1 class="hero-signature">BRI WILLE</h1>
+        </header>
 
-    <section class="tagline-section">
-        <img src="images/Cheetahprint.webp" class="leopard-accent top-right" alt="">
-        <img src="images/Cheetahprint.webp" class="leopard-accent bottom-left" alt="">
+        <section class="intro-strip" aria-label="Introduction">
+            <img src="images/Cheetahprint.webp" class="leopard-accent leopard-top" alt="">
+            <img src="images/Cheetahprint.webp" class="leopard-accent leopard-bottom" alt="">
 
-        <div class="designer-tag-container">
-            <span class="designer-icon">🔍</span>
-            <span class="designer-text">designer</span>
-        </div>
+            <div class="designer-badge">
+                <span aria-hidden="true">⌕</span>
+                <span>Designer</span>
+            </div>
 
-        <p class="tagline-text">
-            <span class="bold-text">SOCIAL</span> media is <span class="bold-text">kinda</span> my <span class="bold-text">thing</span>
-        </p>
+            <p class="tagline">
+                <strong>SOICAL</strong> media is <strong>kinda</strong> my <strong>thing</strong>
+            </p>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/bri.wille?igsh=MWx0ZWhtNW1zdTFyaQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" aria-label="Instagram">
+                    <img src="images/instagramicon.webp" alt="">
+                </a>
+                <a href="https://www.tiktok.com/@briwille?_r=1&_t=ZP-95wmYeHTQjf" target="_blank" rel="noreferrer" aria-label="TikTok">
+                    <img src="images/tiktokicon.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/brianna-wille-729944336" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                    <img src="images/linkedinicon.webp" alt="">
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <img src="images/facebookicon.webp" alt="">
+                </a>
+                <a href="#" aria-label="Pinterest">
+                    <img src="images/pinteresticon.webp" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section class="work-section" id="work">
+            <h2>My Work</h2>
+            <div class="work-grid">
+                <article class="work-card">
+                    <img src="images/BriannaWork.webp" alt="Social media work collage">
+                    <a href="social-media.html">Social Media</a>
+                </article>
+                <article class="work-card">
+                    <img src="images/GraphicDesignPhoto.webp" alt="Graphic design newspaper-style collage">
+                    <a href="graphic-design.html">Graphic Design</a>
+                </article>
+                <article class="work-card">
+                    <img src="images/photocal.webp" alt="Mock-up design collage">
+                    <a href="mock-up.html">Mock-Up</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-preview" id="about">
+            <h2>About Me</h2>
+            <img src="images/aboutmecover.webp" alt="Brianna smiling outdoors" class="about-photo">
+            <a href="about.html" class="learn-more">Click To Learn More</a>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="contact-copy">
+                <h2>Contact Me</h2>
+                <p class="thanks-note">
+                    <span>Thanks</span>
+                    <span>for</span>
+                    <span>Visiting</span>
+                </p>
+                <p class="closing-note">I look forward to connecting with you!</p>
+            </div>
+
+            <div class="contact-art">
+                <img src="images/Contant me photo.webp" alt="Brianna sitting in a cafe" class="contact-photo">
+
+                <div class="contact-card email-card" aria-label="Email Brianna">
+                    <span class="contact-icon"><img src="images/email.webp" alt=""></span>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <div class="contact-card phone-card" aria-label="Call Brianna">
+                    <span class="contact-icon"><img src="images/phone.webp" alt=""></span>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <a class="contact-card linkedin-card" href="https://www.linkedin.com/in/brianna-wille-729944336" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn">
+                    <span class="contact-icon"><img src="images/linkedincircle.webp" alt=""></span>
+                    <span class="stars">★★★★★</span>
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
-
-<div class="social-icons-container">
-    <a href="https://www.linkedin.com/in/brianna-wille-729944336" target="_blank" class="social-link">
-        <img src="images/linkedinicon.webp" alt="LinkedIn">
-    </a>
-
-    <a href="https://www.instagram.com/bri.wille?igsh=MWx0ZWhtNW1zdTFyaQ%3D%3D&utm_source=qr" target="_blank" class="social-link">
-        <img src="images/instagramicon.webp" alt="Instagram">
-    </a>
-
-    <a href="https://www.tiktok.com/@briwille?_r=1&_t=ZP-95wmYeHTQjf" target="_blank" class="social-link">
-        <img src="images/tiktokicon.webp" alt="TikTok">
-    </a>
-
-    <a href="INSERT_FACEBOOK_LINK_HERE" target="_blank" class="social-link">
-        <img src="images/facebookicon.webp" alt="Facebook">
-    </a>
-
-    <a href="INSERT_PINTEREST_LINK_HERE" target="_blank" class="social-link">
-        <img src="images/pinteresticon.webp" alt="Pinterest">
-    </a>
-</div>
-
-<section class="work-section">
-    <h2 class="work-title">MY WORK</h2>
-
-    <div class="work-grid">
-        <div class="work-item">
-            <img src="images/BriannaWork.webp" alt="Social Media Portfolio">
-            <a href="social-media.html" class="work-link">SOCIAL MEDIA</a>
-        </div>
-
-        <div class="work-item">
-            <img src="images/GraphicDesignPhoto.webp" alt="Graphic Design Portfolio">
-            <a href="graphic-design.html" class="work-link">GRAPHIC DESIGN</a>
-        </div>
-    </div>
-</section>
-<section class="about-preview-section">
-    <h2 class="about-title">ABOUT ME</h2>
-
-    <div class="about-image-container">
-        <img src="images/aboutmecover.webp" alt="Brianna Wille" class="about-photo">
-    </div>
-
-    <div class="button-container">
-        <a href="about.html" class="learn-more-btn">CLICK TO LEARN MORE</a>
-    </div>
-</section>
-
-<section class="contact-section">
-    <div class="contact-left">
-        <h2 class="contact-header">CONTACT ME</h2>
-        <div class="thanks-text">
-            <span class="thanks-signature">Thanks</span>
-            <span class="for-signature">for</span>
-            <span class="visiting-signature">Visiting</span>
-        </div>
-        <p class="connecting-text">I look forward to connecting with you!</p>
-    </div>
-
-    <div class="contact-right">
-        <div class="image-wrapper">
-            <img src="images/Contant me photo.webp" alt="Brianna Wille" class="profile-img">
-            
-            <div class="contact-card email-card">
-    <div class="card-icon-circle">
-        <img src="images/email.webp" alt="Email Icon" class="card-image">
-    </div>
-    <span class="stars">★★★★★</span>
-</div>
-
-<div class="contact-card phone-card">
-    <div class="card-icon-circle">
-        <img src="images/phone.webp" alt="Phone Icon" class="card-image">
-    </div>
-    <span class="stars">★★★★★</span>
-</div>
-
-<div class="contact-card linkedin-card">
-    <div class="card-icon-circle">
-        <img src="images/linkedincircle.webp" alt="LinkedIn Icon" class="card-image">
-    </div>
-    <span class="stars">★★★★★</span>
-</div>
-        </div>
-    </div>
-</section>

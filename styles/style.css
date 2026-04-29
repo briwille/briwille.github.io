@@ -1,556 +1,503 @@
-/* 1. Import Fonts at the very top */
-@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&family=Momo+Signature&display=swap');
+:root {
+    --ink: #050505;
+    --pink: #ff64bf;
+    --soft-pink: #fff4fa;
+    --line: #cfcfcf;
+}
 
-/* 2. General Page Setup */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    background-color: #fff;
-    font-family: 'Belleza', sans-serif;
-    letter-spacing: 1px;
+    color: var(--ink);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)),
+        url("../images/whiteleopard.webp");
+    background-size: 420px;
+    font-family: "Belleza", Georgia, serif;
+    letter-spacing: 0;
 }
 
-/* 3. Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 25px;
-    border-bottom: 1px solid #e0e0e0;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-/* 1. Navbar Setup */
-.navbar a {
-    font-family: 'Belleza', sans-serif !important;
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    font-size: 14px;
-    letter-spacing: 2px;
+a {
+    color: inherit;
 }
 
-/* 2. Hero Section Stacking */
-.hero-container {
-    /* display: grid; */
-    /* grid-template-columns: 1fr; */
-    /* place-items: center; */
-    position: relative;
-    overflow: hidden;
-    background: #FDF1F7;
-    padding: 0 0;
-    width: 100%;
-    height: 100vh;
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    min-height: 28px;
+    background: rgba(255, 255, 255, 0.88);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(6px);
 }
 
-.hero-font {
-    z-index: 10;
-    font-family: 'Momo Signature', cursive; /* Using your signature font */
-    color: #ff6ec7; 
-    font-size: 12vw;
+.site-nav a {
+    padding: 8px 4px 7px;
+    color: #111;
+    font-size: clamp(0.58rem, 1.8vw, 0.78rem);
     line-height: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50% );
     text-align: center;
-    width: 100%;;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    place-items: end center;
+    min-height: clamp(250px, 62vw, 720px);
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.2) 34%, transparent 36%),
+        linear-gradient(118deg, #f9f9f9 0%, #fff 42%, #ececec 100%);
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 92%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.9);
+    transform: rotate(35deg);
+}
+
+.hero::before {
+    top: 34%;
+    left: -20%;
+}
+
+.hero::after {
+    right: -25%;
+    bottom: 26%;
 }
 
 .hero-photo {
+    position: relative;
     z-index: 1;
-    width: 90%;
+    width: min(82vw, 640px);
+    min-width: 310px;
+    object-fit: contain;
+}
+
+.hero-signature {
     position: absolute;
-    bottom: 0%;
+    z-index: 2;
+    top: 43%;
     left: 50%;
-    transform: translateX(-50%);
-    /* max-width: 1000px; */
-}
-
-/* 3. Tagline & Cheetah Section */
-.tagline-section {
-    position: relative;
+    width: 140%;
+    margin: 0;
+    color: var(--pink);
+    font-family: "Momo Signature", "Give You Glory", cursive;
+    font-size: clamp(4rem, 16.5vw, 13.5rem);
+    font-weight: 400;
+    line-height: 0.72;
     text-align: center;
-    padding: 100px 20px;
-    background-color: #ffffff;
-    /* CHANGED: visible ensures the cheetah doesn't get cut off */
-    overflow: visible; 
-}
-
-.designer-tag-container {
-    display: inline-flex;
-    align-items: center;
-    border: 2px solid #333;
-    border-radius: 50px;
-    padding: 10px 25px;
-    margin-bottom: 30px;
-}
-
-.tagline-text {
-    font-family: 'Belleza', sans-serif;
-    font-size: 2.5rem;
-    color: #000;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.bold-text { font-weight: 900; text-transform: uppercase; }
-
-/* 4. Cheetah Positioning Fixes */
-.leopard-accent {
-    position: absolute;
-    width: 100px;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.top-right {
-    top: 0;
-    right: 0;
-}
-
-.bottom-left {
-    /* FIXED: These values move the cheetah toward 'SOCIAL' */
-    bottom: 10%;
-    left: 5%; 
-}
-
-/* 5. Social Icons */
-.social-icons-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding-bottom: 50px;
-}
-
-.social-link img {
-    width: 100px;
-    opacity: 0.6;
-    transition: 0.3s;
-}
-
-.social-link img:hover { opacity: 1; transform: scale(1.1); }a
-
-
-.navbar a {
-    font-family: 'Belleza', sans-serif !important;
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    letter-spacing: 2px;
     text-transform: uppercase;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
 }
 
-/* 5. Lower Content Styling */
-.container {
-    text-align: center;
-    font-family: 'Belleza', sans-serif;
-}
-
-h1 {
-    font-family: 'Belleza', sans-serif;
-    text-transform: uppercase;
-}
-
-.tagline-section {
+.intro-strip {
     position: relative;
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #ffffff; /* Or your preferred background */
-    overflow: hidden;
-}
-
-.tagline-text {
-    font-family: 'Belleza', sans-serif; /* Your main clean font */
-    font-size: 2.5rem;
-    color: #000;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-/* This handles the bolding of specific words */
-.bold-text {
-    font-weight: 900; /* Extra bold */
-    text-transform: uppercase; /* For 'SOCIAL' */
-}
-
-.tagline-section {
-    position: relative;
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #ffffff;
-    /* CHANGE THIS: allows the leopard print to 'hang' off the edge if needed */
-    overflow: visible; 
-}
-
-.leopard-accent {
-    position: absolute;
-    width: 200px; /* Adjust size to your liking */
-    z-index: 1;
-    /* This prevents the image from being 'clickable' so it doesn't block your links */
-    pointer-events: none; 
-}
-
-/* Position the left leopard print near the word SOCIAL */
-.bottom-left {
-    bottom: 20%;      /* Moves it up from the very bottom */
-    left: 5%;        /* Moves it in from the very left edge */
-    transform: rotate(-15deg); /* Optional: adds that organic tilted look from your design */
-}
-
-/* Position the right leopard print near the word THING */
-.top-right {
-    top: 10%;
-    right: 5%;
-    transform: rotate(10deg);
-}
-
-.top-right {
-    top: 0;
-    right: 0;
-}
-
-.bottom-left {
-    bottom: 0;
-    left: 0;
-}
-/* 1. Container for the whole section (review) */
-.tagline-section {
-    position: relative;
-    text-align: left;
-    padding: 100px 20px; /* Increased top padding to match design */
-    overflow: hidden;
-}
-
-/* Update your designer container styles */
-.designer-tag-container {
-    display: inline-flex;
-    align-items: center;
-    border: 2px solid #333;
-    border-radius: 50px;
-    padding: 10px 25px;
-    margin-bottom: 30px;
-    
-    /* ADD THIS: Pushes it to the left */
-    margin-right: auto; 
-    margin-left: 50px; /* Adjust this to move it further in/out */
-}
-
-.tagline-section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Keeps text centered while tag moves */
+    align-items: center;
+    gap: clamp(18px, 4vw, 36px);
+    min-height: 220px;
+    padding: 18px 20px 42px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.designer-badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 84px;
+    margin-left: clamp(0px, 2vw, 18px);
+    padding: 3px 12px 2px;
+    border: 1px solid #4a4a4a;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    font-size: 0.68rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.designer-badge span:first-child {
+    color: #777;
+    font-size: 0.96rem;
+    line-height: 0.8;
+}
+
+.tagline {
     position: relative;
-    padding: 100px 20px;
-    overflow: visible;
+    z-index: 2;
+    margin: 0;
+    font-size: clamp(1.05rem, 3.6vw, 2.2rem);
+    line-height: 1.2;
+    text-align: center;
+    word-spacing: 0.24em;
 }
 
-/* Style for the text inside the tag */
-.designer-text {
-    font-family: 'Belleza', sans-serif; /* Your clean, professional font */
-    font-size: 1rem;
-    color: #333;
-    text-transform: uppercase;  /* Forces uppercase like in your design */
-    letter-spacing: 1px;       /* Optional: Spaced out for design polish */
-    margin-left: 10px;         /* Space between icon and text */
+.tagline strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0;
 }
 
-/* Style for the tiny icon (optional) */
-.designer-icon {
-    font-size: 0.8rem;
-    opacity: 0.7;             /* Make it slightly subtle */
+.social-icons {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: clamp(28px, 8.5vw, 86px);
+    width: 100%;
 }
-.social-icons-container {
-    display: flex;            /* Lined up in a row */
-    justify-content: center;   /* Centered under the text */
-    gap: 30px;                /* Space between each icon */
-    margin-top: 40px;         /* Distance from the tagline above */
-    padding-bottom: 50px;
+
+.social-icons img {
+    width: clamp(26px, 5.8vw, 44px);
+    height: clamp(26px, 5.8vw, 44px);
+    object-fit: contain;
+    opacity: 0.68;
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.social-icons a:hover img,
+.social-icons a:focus-visible img {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 .leopard-accent {
     position: absolute;
-    /* INCREASED SIZE */
-    width: 250px; 
-    z-index: 0;
+    z-index: 1;
+    width: clamp(145px, 31vw, 315px);
     pointer-events: none;
 }
 
-.bottom-left {
-    bottom: 5%;
-    left: 2%; /* Moves it slightly in from the corner */
+.leopard-top {
+    top: -34px;
+    right: -40px;
+    transform: rotate(18deg);
 }
 
-.top-right {
-    top: 5%;
-    right: 2%;
+.leopard-bottom {
+    bottom: -70px;
+    left: -62px;
+    transform: rotate(-15deg);
 }
-/* Hover Effect: When you move your mouse over them, they darken and grow slightly */
-.social-link img:hover {
-    opacity: 1;               /* Turns full black/color on hover */
-    transform: scale(1.1);    /* Slightly grows */
-}
-.social-icons-container {
-    display: flex;            
-    justify-content: center;   
-    
-    /* You might want to increase the gap if the icons are bigger */
-    gap: 60px;                
-    
-    margin-top: 60px;         
-}
+
 .work-section {
     position: relative;
-    padding: 80px 20px;
+    padding: clamp(36px, 8vw, 82px) clamp(12px, 3vw, 32px) 28px;
+    background: #fff;
     text-align: center;
 }
 
-.work-title {
-    font-family: 'Belleza', sans-serif;
-    font-size: 9rem;
-    letter-spacing: 5px;
-    margin-bottom: 50px;
+.work-section h2,
+.contact-copy h2 {
+    margin: 0;
+    font-family: "Belleza", Georgia, serif;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
-/* The Grid Layout */
+.work-section h2 {
+    margin-bottom: clamp(38px, 8vw, 70px);
+    font-size: clamp(2.35rem, 8vw, 5.6rem);
+    line-height: 0.9;
+}
+
 .work-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(10px, 2vw, 28px);
+    width: min(1180px, 100%);
     margin: 0 auto;
-    flex-wrap: wrap; /* Allows items to stack on mobile */
 }
 
-/* Individual Work Items */
-.work-item {
-    flex: 1;
-    min-width: 300px; /* Ensures they don't get too skinny */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.work-card {
+    min-width: 0;
 }
 
-.work-item img {
+.work-card img {
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* Subtle shadow like in the design */
+    aspect-ratio: 0.72;
+    object-fit: cover;
 }
 
-/* The Text Links */
-.work-link {
-    font-family: 'Belleza', sans-serif;
-    font-size: 1.5rem;
-    color: black;
+.work-card a {
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: 1px solid currentColor;
+    font-size: clamp(0.86rem, 2.4vw, 1.45rem);
+    line-height: 1.08;
+    text-transform: uppercase;
     text-decoration: none;
-    border-bottom: 2px solid black; /* Creates that specific underline look */
-    padding-bottom: 5px;
-    transition: 0.3s;
 }
-
 .work-link:hover {
     color: #ff6ec7; /* Pink hover effect */
     border-bottom-color: #ff6ec7;
 }
-.about-preview-section {
+
+.about-preview {
+    padding: clamp(32px, 7vw, 90px) clamp(20px, 5vw, 48px) 46px;
+    background: #fff;
     text-align: center;
-    padding: 100px 20px;
-    background-color: #fff;
 }
 
-.about-title {
-    font-family: 'Momo Signature', cursive;
-    font-size: 6rem;
-    color: #ff6ec7; /* Your signature pink */
-    margin-bottom: 40px;
-    text-transform: none; /* Keeps it looking like a signature */
-}
-
-.about-image-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto 50px auto;
-    overflow: hidden;
+.about-preview h2 {
+    margin: 0 0 18px;
+    color: var(--pink);
+    font-family: "Momo Signature", "Give You Glory", cursive;
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 400;
+    line-height: 0.8;
+    text-transform: uppercase;
 }
 
 .about-photo {
-    width: 100%;
-    height: auto;
-    display: block;
-    aspect-ratio: 21 / 9; 
-    object-fit: cover; /* This stays the same */
-
-    /* ADD THIS LINE */
-    /* The first value is horizontal (50% = center) */
-    /* The second value is vertical (0% = top, 100% = bottom) */
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    aspect-ratio: 4.05 / 1.3;
+    object-fit: cover;
     object-position: 50% 20%;
 }
 
-/* 3. The Pill Button */
-.button-container {
-    margin-top: 30px;
-}
-
-.learn-more-btn {
+.learn-more {
     display: inline-block;
-    padding: 20px 60px;
-    background-color: #fff;
-    color: #ff6ec7;
-    font-family: 'Belleza', sans-serif;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 100px; /* Creates the pill shape */
-    border: 1px solid #f0f0f0; /* Very light border */
-    
-    /* The soft shadow effect */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    
-    border-bottom: 2px solid #ff6ec7; /* The pink underline inside the button */
-    transition: all 0.3s ease;
-}
+    margin-top: 22px;
+    padding: 9px 20px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    color: var(--pink);
+    font-size: clamp(0.78rem, 2.2vw, 1rem);
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    }
 
 .learn-more-btn:hover {
     transform: translateY(-5px); /* Gentle float up on hover */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
+
 .contact-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(170px, 0.82fr) minmax(260px, 1.18fr);
     align-items: center;
-    justify-content: space-around;
-    padding: 100px 5%;
-    /* Use your cheetah print as a subtle tiled background */
-    background-image: url('images/Cheetahprint.webp');
-    background-size: 300px;
-    background-color: rgba(255, 255, 255, 0.92); /* Fades the cheetah print */
-    background-blend-mode: overlay;
-    min-height: 600px;
+    gap: clamp(14px, 3vw, 44px);
+    padding: clamp(34px, 8vw, 92px) clamp(14px, 5vw, 70px);
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+        url("../images/whiteleopard.webp");
+    background-size: 430px;
 }
 
-/* Left Side Typography */
-.contact-header {
-    font-family: 'Belleza', sans-serif;
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-.thanks-text {
+.contact-copy {
+    position: relative;
+    z-index: 2;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
-    font-family: 'Give You Glory', cursive; /* Your handwriting font */
-    color: #ff6ec7;
-    font-size: 5rem;
-    line-height: 0.8;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    min-height: 260px;
 }
 
-.for-signature { font-size: 2.5rem; padding-left: 50px; }
-.visiting-signature { padding-left: 20px; }
-
-.connecting-text {
-    font-family: 'Momo Signature', cursive;
-    font-size: 1.8rem;
-    color: #333;
+.contact-copy h2 {
+    font-size: clamp(1.5rem, 4.8vw, 3.4rem);
+    line-height: 1;
 }
 
-/* Right Side: Image and Cards */
-.contact-right {
-    position: relative;
+.thanks-note {
+    margin: 0;
+    color: var(--pink);
+    font-family: "Give You Glory", "Momo Signature", cursive;
+    font-size: clamp(2.6rem, 8vw, 6rem);
+    line-height: 0.86;
 }
 
-.image-wrapper {
-    position: relative;
-    padding: 20px;
-}
-
-.profile-img {
-    width: 400px;
-    height: auto;
-    box-shadow: 20px 20px 0px #FDF1F7; /* Optional: adds that pink block behind */
-}
-
-/* Floating Cards Styling */
-.contact-card {
-    position: absolute;
-    background: white;
-    border: 2px solid #000;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 280px;
-    z-index: 5;
-}
-
-.card-icon {
-    font-size: 1.5rem;
-    border: 2px solid #000;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.stars { color: #FFD700; font-size: 1.2rem; }
-
-/* Positioning each card to overlap the photo */
-.email-card { top: 10%; left: -150px; }
-.phone-card { top: 40%; left: -100px; }
-.linkedin-card { top: 70%; left: -150px; }
-
-/* The circular container for your image icon */
-.card-icon-circle {
-    width: 50px;           /* Size of the circle */
-    height: 50px;
-    border: 2px solid #000;
-    border-radius: 50%;    /* Makes it a perfect circle */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;      /* Keeps the image inside the circle */
-    background-color: #fff;
-}
-
-/* The actual image icon */
-.card-image {
-    width: 100%;            /* Adjust this to make the icon look smaller or larger inside the circle */
-    height: auto;
+.thanks-note span {
     display: block;
 }
 
+.thanks-note span:nth-child(2) {
+    padding-left: 36%;
+    font-size: 0.48em;
+}
+
+.thanks-note span:nth-child(3) {
+    padding-left: 18%;
+}
+
+.closing-note {
+    margin: 0;
+    font-family: "Give You Glory", "Momo Signature", cursive;
+    font-size: clamp(1rem, 2.7vw, 2rem);
+    line-height: 1;
+}
+
+.contact-art {
+    position: relative;
+    min-height: clamp(220px, 53vw, 520px);
+}
+
+.contact-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(49vw, 430px);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .contact-card {
     position: absolute;
-    background: white;
-    border: 2px solid #000;
-    padding: 10px 20px;
+    left: 0;
+    z-index: 3;
     display: flex;
     align-items: center;
-    gap: 15px;
-    width: 300px;
-    z-index: 5;
-    /* This adds the 'floating' effect */
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.05); 
+    justify-content: space-between;
+    gap: clamp(14px, 2vw, 24px);
+    width: min(57vw, 340px);
+    min-width: 185px;
+    padding: clamp(6px, 1.4vw, 12px) clamp(12px, 2.3vw, 24px);
+    border: 1px solid #111;
+    background: #fff;
+    text-decoration: none;
 }
-body {
-    margin: 0;
-    padding: 0;
-    /* This points to your new image file */
-    background-image: url('images/whiteleopard.webp'); 
-    
-    /* This makes the pattern repeat smoothly */
-    background-repeat: repeat; 
-    
-    /* This ensures the pattern stays small and subtle */
-    background-size: 400px; 
-    
-    /* Optional: This keeps the background still while you scroll */
-    background-attachment: fixed; 
-    
-    background-color: #fff; /* Fallback color */
+
+.email-card {
+    top: 17%;
 }
-body {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
-                url('images/whiteleopard.webp');
-    background-repeat: repeat;
-    background-size: 400px;
+
+.phone-card {
+    top: 43%;
+    left: 13%;
+}
+
+.linkedin-card {
+    top: 69%;
+}
+
+.contact-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 clamp(32px, 6vw, 58px);
+    width: clamp(32px, 6vw, 58px);
+    height: clamp(32px, 6vw, 58px);
+    border: 2px solid #777;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.contact-icon img {
+    width: 82%;
+    height: 82%;
+    object-fit: contain;
+}
+
+.stars {
+    color: #ffd320;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.9rem, 3vw, 1.7rem);
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+    .hero {
+        min-height: 250px;
+    }
+
+    .hero-photo {
+        width: 88%;
+        min-width: 300px;
+    }
+
+    .leopard-accent {
+        width: clamp(132px, 38vw, 210px);
+    }
+
+    .intro-strip {
+        padding-bottom: 34px;
+    }
+
+    .work-section {
+        padding-top: 34px;
+    }
+
+    .contact-section {
+        grid-template-columns: 0.64fr 1fr;
+        gap: 8px;
+        padding: 34px 8px 36px;
+    }
+
+    .contact-photo {
+        width: 54vw;
+    }
+
+    .contact-card {
+        width: 38vw;
+        min-width: 128px;
+    }
+
+    .phone-card {
+        left: 8%;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero-signature {
+        top: 45%;
+        font-size: 4.05rem;
+    }
+
+    .tagline {
+        word-spacing: 0.18em;
+    }
+
+    .work-grid {
+        gap: 8px;
+    }
+
+    .work-card img {
+        aspect-ratio: 0.66;
+    }
+
+    .contact-copy {
+        min-height: 216px;
+    }
+
+    .contact-art {
+        min-height: 218px;
+    }
+
+    .stars {
+        letter-spacing: 0;
+    }
 }
