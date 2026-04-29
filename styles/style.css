@@ -351,12 +351,3 @@ h1 {
     color: #ff6ec7; /* Pink hover effect */
     border-bottom-color: #ff6ec7;
 }
-
-/* Cheetah positioning for this specific section */
-.work-accent {
-    position: absolute;
-    left: -20px;
-    top: 50px;
-    width: 250px;
-    transform: rotate(-10deg);
-}
