@@ -531,3 +531,26 @@ h1 {
     /* This adds the 'floating' effect */
     box-shadow: 10px 10px 0px rgba(0,0,0,0.05); 
 }
+body {
+    margin: 0;
+    padding: 0;
+    /* This points to your new image file */
+    background-image: url('images/whiteleopard.webp'); 
+    
+    /* This makes the pattern repeat smoothly */
+    background-repeat: repeat; 
+    
+    /* This ensures the pattern stays small and subtle */
+    background-size: 400px; 
+    
+    /* Optional: This keeps the background still while you scroll */
+    background-attachment: fixed; 
+    
+    background-color: #fff; /* Fallback color */
+}
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                url('images/4.webp');
+    background-repeat: repeat;
+    background-size: 400px;
+}
