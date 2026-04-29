@@ -412,3 +412,88 @@ h1 {
     transform: translateY(-5px); /* Gentle float up on hover */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 5%;
+    /* Use your cheetah print as a subtle tiled background */
+    background-image: url('images/Cheetahprint.webp');
+    background-size: 300px;
+    background-color: rgba(255, 255, 255, 0.92); /* Fades the cheetah print */
+    background-blend-mode: overlay;
+    min-height: 600px;
+}
+
+/* Left Side Typography */
+.contact-header {
+    font-family: 'Belleza', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.thanks-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Give You Glory', cursive; /* Your handwriting font */
+    color: #ff6ec7;
+    font-size: 5rem;
+    line-height: 0.8;
+    margin-bottom: 40px;
+}
+
+.for-signature { font-size: 2.5rem; padding-left: 50px; }
+.visiting-signature { padding-left: 20px; }
+
+.connecting-text {
+    font-family: 'Momo Signature', cursive;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Right Side: Image and Cards */
+.contact-right {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 400px;
+    height: auto;
+    box-shadow: 20px 20px 0px #FDF1F7; /* Optional: adds that pink block behind */
+}
+
+/* Floating Cards Styling */
+.contact-card {
+    position: absolute;
+    background: white;
+    border: 2px solid #000;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 280px;
+    z-index: 5;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stars { color: #FFD700; font-size: 1.2rem; }
+
+/* Positioning each card to overlap the photo */
+.email-card { top: 10%; left: -150px; }
+.phone-card { top: 40%; left: -100px; }
+.linkedin-card { top: 70%; left: -150px; }
