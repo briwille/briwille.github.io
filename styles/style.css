@@ -351,3 +351,60 @@ h1 {
     color: #ff6ec7; /* Pink hover effect */
     border-bottom-color: #ff6ec7;
 }
+.about-preview-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #fff;
+}
+
+.about-title {
+    font-family: 'Momo Signature', cursive;
+    font-size: 6rem;
+    color: #ff6ec7; /* Your signature pink */
+    margin-bottom: 40px;
+    text-transform: none; /* Keeps it looking like a signature */
+}
+
+.about-image-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 50px auto;
+    overflow: hidden;
+}
+
+.about-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* This gives it the wide 'panorama' look */
+    aspect-ratio: 21 / 9; 
+    object-fit: cover;
+}
+
+/* 3. The Pill Button */
+.button-container {
+    margin-top: 30px;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 20px 60px;
+    background-color: #fff;
+    color: #ff6ec7;
+    font-family: 'Belleza', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 100px; /* Creates the pill shape */
+    border: 1px solid #f0f0f0; /* Very light border */
+    
+    /* The soft shadow effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    
+    border-bottom: 2px solid #ff6ec7; /* The pink underline inside the button */
+    transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-5px); /* Gentle float up on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
