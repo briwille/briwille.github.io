@@ -374,7 +374,7 @@ h1 {
 
 .about-photo {
     width: 100%;
-    height: auto;
+    height: bottom;
     display: block;
     /* This gives it the wide 'panorama' look */
     aspect-ratio: 21 / 9; 
