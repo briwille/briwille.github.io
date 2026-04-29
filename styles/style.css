@@ -374,11 +374,15 @@ h1 {
 
 .about-photo {
     width: 100%;
-    height: bottom;
+    height: auto;
     display: block;
-    /* This gives it the wide 'panorama' look */
     aspect-ratio: 21 / 9; 
-    object-fit: cover;
+    object-fit: cover; /* This stays the same */
+
+    /* ADD THIS LINE */
+    /* The first value is horizontal (50% = center) */
+    /* The second value is vertical (0% = top, 100% = bottom) */
+    object-position: 50% 20%;
 }
 
 /* 3. The Pill Button */
