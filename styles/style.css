@@ -1068,54 +1068,6 @@ a {
     transform: translateY(-2px);
 }
 
-.campaign-case-study {
-    color: var(--ink);
-}
-
-.campaign-case-study summary {
-    display: inline-grid;
-    place-items: center;
-    justify-self: start;
-    min-height: 38px;
-    padding: 8px 16px;
-    border: 1px solid rgba(68, 41, 34, 0.22);
-    border-radius: 999px;
-    background: rgba(255, 227, 231, 0.65);
-    color: var(--ink);
-    cursor: pointer;
-    font-family: "Belleza", Georgia, serif;
-    font-size: 0.92rem;
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.campaign-case-study summary::-webkit-details-marker {
-    display: none;
-}
-
-.campaign-case-study summary::after {
-    content: "+";
-    margin-left: 9px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.campaign-case-study[open] summary::after {
-    content: "-";
-}
-
-.campaign-case-study p {
-    margin-top: 12px;
-    color: var(--ink);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(0.98rem, 1.5vw, 1.08rem);
-    line-height: 1.4;
-    text-transform: none;
-}
-
-.campaign-case-study p + p {
-    margin-top: 10px;
-}
-
 .graphic-design-page {
     background:
         repeating-linear-gradient(
