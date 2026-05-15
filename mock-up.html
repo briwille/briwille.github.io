@@ -19,60 +19,49 @@
         <a href="index.html#contact">Contact</a>
     </nav>
 
-    <main class="portfolio-page">
+    <main class="portfolio-page campaign-page">
         <section class="portfolio-hero">
             <a class="back-link" href="index.html#work">Back To Work</a>
             <h1>Campaigns</h1>
         </section>
 
-        <section class="upload-work" aria-labelledby="upload-title">
-            <div class="upload-copy">
-                <h2 id="upload-title">Upload Work</h2>
-                <p>Add campaign visuals, branded scenes, product mockups, or promotional designs here to preview your campaign work.</p>
-            </div>
+        <section class="campaign-showcase" aria-label="Campaign presentation slideshows">
+            <article class="campaign-card">
+                <img src="images/campaign-ffen-cover.png" alt="Set Sail to Serve Others campaign presentation cover">
+                <div>
+                    <p>Integrated Campaign</p>
+                    <h2>FFEN Set Sail Campaign</h2>
+                    <a href="files/ffen-set-sail-campaign.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                </div>
+            </article>
 
-            <label class="upload-dropzone">
-                <input id="workUpload" type="file" accept="image/*" multiple>
-                <span>Choose Images</span>
-            </label>
-        </section>
+            <article class="campaign-card">
+                <img src="images/campaign-state-speed-cover.png" alt="State of Speed campaign presentation cover">
+                <div>
+                    <p>Sports Campaign</p>
+                    <h2>State of Speed</h2>
+                    <a href="files/state-of-speed.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                </div>
+            </article>
 
-        <section class="social-gallery" id="workGallery" aria-label="Mock-up work gallery">
-            <article class="gallery-card placeholder-card">
-                <span>Upload images to preview your campaign work here.</span>
+            <article class="campaign-card">
+                <img src="images/campaign-groveland-cover.png" alt="Groveland Tap social media marketing presentation cover">
+                <div>
+                    <p>Social Media Plan</p>
+                    <h2>Groveland Tap</h2>
+                    <a href="files/groveland-tap-social-media.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                </div>
+            </article>
+
+            <article class="campaign-card">
+                <img src="images/campaign-maxfield-cover.png" alt="Maxfield Book campaign presentation cover">
+                <div>
+                    <p>Advertising Book</p>
+                    <h2>Maxfield Book</h2>
+                    <a href="files/maxfield-book.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                </div>
             </article>
         </section>
     </main>
-
-    <script>
-        const uploadInput = document.querySelector("#workUpload");
-        const gallery = document.querySelector("#workGallery");
-        const placeholder = "Upload images to preview your campaign work here.";
-
-        uploadInput.addEventListener("change", () => {
-            const files = Array.from(uploadInput.files).filter((file) => file.type.startsWith("image/"));
-
-            gallery.innerHTML = "";
-
-            if (!files.length) {
-                gallery.innerHTML = `<article class="gallery-card placeholder-card"><span>${placeholder}</span></article>`;
-                return;
-            }
-
-            files.forEach((file) => {
-                const card = document.createElement("article");
-                const image = document.createElement("img");
-                const caption = document.createElement("p");
-
-                card.className = "gallery-card";
-                image.src = URL.createObjectURL(file);
-                image.alt = file.name.replace(/\.[^/.]+$/, "");
-                caption.textContent = file.name;
-
-                card.append(image, caption);
-                gallery.append(card);
-            });
-        });
-    </script>
 </body>
 </html>
