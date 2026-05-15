@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mock-Up Work | Brianna Wille</title>
-    <meta name="description" content="Mock-up portfolio work by Brianna Wille.">
+    <title>Campaigns | Brianna Wille</title>
+    <meta name="description" content="Campaign portfolio work by Brianna Wille.">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,13 +22,13 @@
     <main class="portfolio-page">
         <section class="portfolio-hero">
             <a class="back-link" href="index.html#work">Back To Work</a>
-            <h1>Mock-Up</h1>
+            <h1>Campaigns</h1>
         </section>
 
         <section class="upload-work" aria-labelledby="upload-title">
             <div class="upload-copy">
                 <h2 id="upload-title">Upload Work</h2>
-                <p>Add product mockups, packaging concepts, campaign visuals, or branded scenes here to preview your mock-up work.</p>
+                <p>Add campaign visuals, branded scenes, product mockups, or promotional designs here to preview your campaign work.</p>
             </div>
 
             <label class="upload-dropzone">
@@ -39,7 +39,7 @@
 
         <section class="social-gallery" id="workGallery" aria-label="Mock-up work gallery">
             <article class="gallery-card placeholder-card">
-                <span>Upload images to preview your mock-up work here.</span>
+                <span>Upload images to preview your campaign work here.</span>
             </article>
         </section>
     </main>
@@ -47,7 +47,7 @@
     <script>
         const uploadInput = document.querySelector("#workUpload");
         const gallery = document.querySelector("#workGallery");
-        const placeholder = "Upload images to preview your mock-up work here.";
+        const placeholder = "Upload images to preview your campaign work here.";
 
         uploadInput.addEventListener("change", () => {
             const files = Array.from(uploadInput.files).filter((file) => file.type.startsWith("image/"));
