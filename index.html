@@ -16,12 +16,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Give+You+Glory&family=Momo+Signature&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Dancing+Script:wght@400..700&family=Give+You+Glory&family=Instrument+Serif:ital@0;1&family=Momo+Signature&display=swap" rel="stylesheet">
     <link href="./styles/style.css" rel="stylesheet">
 </head>
 <body>
     <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#home">Home</a>
+        <a href="#home" aria-current="page">Home</a>
         <a href="#work">My Work</a>
         <a href="#about">About Me</a>
         <a href="#contact">Contact</a>
@@ -29,21 +29,33 @@
 
     <main id="home">
         <header class="hero">
-            <img src="images/transparentbricover.webp" alt="Brianna Wille" class="hero-photo">
-            <h1 class="hero-signature">BRI WILLE</h1>
+            <h1 class="hero-signature">
+                <span class="signature-text">BRI WILLE</span>
+                <span class="brand-confetti brand-pill brand-1" aria-hidden="true">Instagram</span>
+                <span class="brand-confetti brand-pill brand-2" aria-hidden="true">TikTok</span>
+                <span class="brand-confetti brand-pill brand-3" aria-hidden="true">LinkedIn</span>
+                <span class="brand-confetti brand-pill brand-4" aria-hidden="true">Pinterest</span>
+                <span class="brand-confetti brand-pill brand-5" aria-hidden="true">Canva</span>
+                <span class="brand-confetti brand-pill brand-6" aria-hidden="true">Google</span>
+                <span class="brand-confetti brand-pill brand-7" aria-hidden="true">Adobe</span>
+                <span class="brand-confetti brand-pill brand-8" aria-hidden="true">X</span>
+            </h1>
+            <p class="hero-portfolio">Portfolio</p>
         </header>
 
         <section class="intro-strip" aria-label="Introduction">
-            <img src="images/Cheetahprint.webp" class="leopard-accent leopard-top" alt="">
-            <img src="images/Cheetahprint.webp" class="leopard-accent leopard-bottom" alt="">
-
-            <div class="designer-badge">
-                <span aria-hidden="true">⌕</span>
-                <span>Designer</span>
+            <div class="designer-info">
+                <div class="designer-badge" tabindex="0" aria-describedby="designer-definition">
+                    <span aria-hidden="true">⌕</span>
+                    <span>Designer</span>
+                </div>
+                <p class="designer-definition" id="designer-definition">
+                    I’m a designer focused on graphic design, social media, and branding, creating strategic visuals that communicate clearly and connect with audiences.
+                </p>
             </div>
 
             <p class="tagline">
-                <strong>SOICAL</strong> media is <strong>kinda</strong> my <strong>thing</strong>
+                <strong>SOCIAL</strong> media is <strong>kinda</strong> my <strong>thing</strong>
             </p>
 
             <div class="social-icons">
@@ -77,7 +89,7 @@
                     <a href="graphic-design.html">Graphic Design</a>
                 </article>
                 <article class="work-card">
-                    <img src="images/photocal.webp" alt="Mock-up design collage">
+                    <img src="images/rarebeauty.webp" alt="Rare Beauty mock-up design">
                     <a href="mock-up.html">Mock-Up</a>
                 </article>
             </div>
@@ -103,17 +115,25 @@
             <div class="contact-art">
                 <img src="images/Contant me photo.webp" alt="Brianna sitting in a cafe" class="contact-photo">
 
-                <div class="contact-card email-card" aria-label="Email Brianna">
+                <a class="contact-card email-card" href="mailto:briwille2@gmail.com" aria-label="Email Brianna">
                     <span class="contact-icon"><img src="images/email.webp" alt=""></span>
-                    <span class="stars">★★★★★</span>
-                </div>
-                <div class="contact-card phone-card" aria-label="Call Brianna">
+                    <span class="contact-details">
+                        <span class="stars">★★★★★</span>
+                        <span class="contact-text">briwille2@gmail.com</span>
+                    </span>
+                </a>
+                <a class="contact-card phone-card" href="tel:+16512104506" aria-label="Call Brianna">
                     <span class="contact-icon"><img src="images/phone.webp" alt=""></span>
-                    <span class="stars">★★★★★</span>
-                </div>
+                    <span class="contact-details">
+                        <span class="stars">★★★★★</span>
+                        <span class="contact-text">651-210-4506</span>
+                    </span>
+                </a>
                 <a class="contact-card linkedin-card" href="https://www.linkedin.com/in/brianna-wille-729944336" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn">
                     <span class="contact-icon"><img src="images/linkedincircle.webp" alt=""></span>
-                    <span class="stars">★★★★★</span>
+                    <span class="contact-details">
+                        <span class="stars">★★★★★</span>
+                    </span>
                 </a>
             </div>
         </section>
