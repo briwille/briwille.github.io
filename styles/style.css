@@ -1046,16 +1046,21 @@ a {
 }
 
 .campaign-card a {
+    display: inline-grid;
+    place-items: center;
     justify-self: start;
+    min-width: 230px;
+    min-height: 54px;
     margin-top: 6px;
-    padding: 10px 20px;
+    padding: 10px 24px;
     border: 1px solid var(--pink);
     border-radius: 999px;
     background: #fff;
     color: var(--pink);
     font-family: "Belleza", Georgia, serif;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
     line-height: 1;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
