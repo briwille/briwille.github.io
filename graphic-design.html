@@ -26,59 +26,129 @@
         </section>
 
         <section class="graphic-showcase" aria-label="Graphic design case studies">
-            <div class="case-study case-study-feature">
-                <div class="browser-mockup">
-                    <div class="browser-bar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <div class="browser-url"></div>
+            <article class="graphic-project graphic-project-cyclist">
+                <div class="graphic-project-card">
+                    <p>Responsive Web Design</p>
+                    <h2>American Cyclist Association</h2>
+                    <span>Desktop and mobile interface design for a cycling advocacy web experience.</span>
+                    <button class="case-study-button" type="button" data-graphic-case="cyclist">View Case Study</button>
+                </div>
+
+                <div class="graphic-project-art cyclist-layout">
+                    <div class="browser-mockup">
+                        <div class="browser-bar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div class="browser-url"></div>
+                        </div>
+                        <div class="browser-art cyclist-art">
+                            <img src="images/graphicdesigndesktop.webp" alt="Desktop graphic design project preview">
+                        </div>
                     </div>
-                    <div class="browser-art cyclist-art">
-                        <img src="images/graphicdesigndesktop.webp" alt="Desktop graphic design project preview">
-                        <div class="browser-ribbon">american cyclist association</div>
-                        <div class="browser-tabs">
-                            <span>bike rides</span>
-                            <span>cycling routes</span>
-                            <span>events</span>
-                            <span>social</span>
+
+                    <div class="phone-mockup">
+                        <div class="phone-speaker"></div>
+                        <img src="images/Graphicmobile.webp" alt="Mobile graphic design project preview">
+                    </div>
+                </div>
+            </article>
+
+            <div class="espresso-divider">
+                <img src="images/bw-leopard-logo.png" alt="Brianna Wille leopard print BW logo">
+            </div>
+
+            <article class="graphic-project graphic-project-packaging">
+                <div class="graphic-project-card">
+                    <p>Packaging Design</p>
+                    <h2>BiteBliss Brownie Bites</h2>
+                    <span>Physical packaging concepts for two playful brownie bite flavors.</span>
+                    <button class="case-study-button" type="button" data-graphic-case="bitebliss">View Case Study</button>
+                </div>
+
+                <div class="graphic-project-art single-art">
+                    <div class="browser-mockup small-browser">
+                        <div class="browser-bar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div class="browser-url"></div>
+                        </div>
+                        <div class="browser-art">
+                            <img src="images/packagedesign.webp" alt="Package design preview">
                         </div>
                     </div>
                 </div>
+            </article>
 
-                <div class="phone-mockup">
-                    <div class="phone-speaker"></div>
-                    <img src="images/Graphicmobile.webp" alt="Mobile graphic design project preview">
+            <article class="graphic-project graphic-project-brand">
+                <div class="graphic-project-card">
+                    <p>Identity System</p>
+                    <h2>BA Agency White Sheep</h2>
+                    <span>A full stationery identity system built around a custom illustrated mark.</span>
+                    <button class="case-study-button" type="button" data-graphic-case="white-sheep">View Case Study</button>
                 </div>
 
-                <h2>Case Study</h2>
-            </div>
-
-            <div class="espresso-divider">
-                <img src="images/brithumbnail.webp" alt="Brianna Wille brand thumbnail">
-            </div>
-
-            <div class="case-study case-study-split">
-                <div class="case-label">Case Study</div>
-
-                <div class="browser-mockup small-browser">
-                    <div class="browser-bar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <div class="browser-url"></div>
-                    </div>
-                    <div class="browser-art">
-                        <img src="images/packagedesign.webp" alt="Package design preview">
-                    </div>
-                </div>
-
-                <div class="brand-board">
-                    <div class="brand-corner"></div>
+                <div class="graphic-project-art single-art brand-art">
                     <img src="images/systemwhtitesheep.webp" alt="White sheep brand system preview" class="brand-system-image">
                 </div>
-            </div>
+            </article>
         </section>
     </main>
+
+    <dialog class="campaign-modal" aria-labelledby="graphic-modal-title">
+        <button class="campaign-modal-close" type="button" aria-label="Close case study">×</button>
+        <h2 id="graphic-modal-title"></h2>
+        <div id="graphic-modal-copy"></div>
+    </dialog>
+
+    <script>
+        const graphicCaseStudies = {
+            cyclist: {
+                title: "American Cyclist Association",
+                paragraphs: [
+                    "For this project, I designed a responsive informational web application focused on cycling advocacy and education. The goal was to create a visually engaging and user-friendly experience that could function across multiple devices. My role included UI/UX design, layout development, typography selection, branding, and responsive screen mockups for mobile, tablet, and desktop formats.",
+                    "Using Adobe Illustrator, InDesign, and Photoshop, I created a cohesive interface system that followed industry-standard responsive web design practices. I applied a grid-based layout structure to organize navigation, imagery, and text content while maintaining consistency across all screen sizes. The project included a universal navigation system, header, footer, and content sections optimized for usability and readability.",
+                    "I tailored the design toward cycling enthusiasts and advocacy communities by using soft pastel colors, lifestyle photography, and approachable typography to create a welcoming and community-focused atmosphere. The combination of imagery, branding, and responsive layouts helped communicate accessibility, safety, and the joy of bicycling while strengthening my skills in digital interface and responsive design."
+                ]
+            },
+            bitebliss: {
+                title: "BiteBliss Packaging Design",
+                paragraphs: [
+                    "For this project, I created physical package designs for a mock snack brand called BiteBliss. I designed two brownie bite flavors: Mini Cosmic Brownie Bites and Mini Peppermint Brownie Bites. My role included brand development, packaging layout design, typography selection, and mockup creation using Adobe Illustrator, Photoshop, and InDesign.",
+                    "I applied industry-standard packaging design techniques by creating a consistent brand identity while differentiating each flavor through color palettes, graphics, and typography. Illustrator was used for branding and layout elements, while Photoshop was used for image editing and realistic mockup presentation. I also focused on visual hierarchy and shelf appeal to make the products stand out.",
+                    "The designs were tailored toward younger snack consumers and seasonal shoppers. The Cosmic flavor used a futuristic galaxy theme to create excitement, while the Peppermint flavor used festive holiday visuals and bright red packaging to appeal to winter audiences. This project strengthened my branding and packaging design skills."
+                ]
+            },
+            "white-sheep": {
+                title: "BA Agency Identity System",
+                paragraphs: [
+                    "For this project, I created a complete identity system for a mock agency called White Sheep. The project included the design of a business card, letterhead, and envelope centered around a custom monogram logo. My role included logo illustration, branding development, typography selection, layout design, and creating all mockup artifacts.",
+                    "Using Adobe Illustrator and InDesign, I developed a cohesive branding system that followed industry-standard identity design practices. I focused on creating strong visual hierarchy, consistent spacing, balanced composition, and clean typography across all materials. The custom BA sheep logo became the primary branding element and was consistently applied throughout the stationery system to strengthen brand recognition.",
+                    "The identity system was tailored toward creative professionals and potential employers by combining playful visuals with professional structure. I used a soft pink color palette, rounded graphic elements, and illustrated sheep characters to create a memorable and approachable brand personality while maintaining readability and organization. Through this project, I strengthened my understanding of branding consistency, typographic hierarchy, and the importance of contrast, proportion, and space within professional identity design."
+                ]
+            }
+        };
+
+        const graphicModal = document.querySelector(".campaign-modal");
+        const graphicModalTitle = document.querySelector("#graphic-modal-title");
+        const graphicModalCopy = document.querySelector("#graphic-modal-copy");
+
+        document.querySelectorAll("[data-graphic-case]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const study = graphicCaseStudies[button.dataset.graphicCase];
+                graphicModalTitle.textContent = study.title;
+                graphicModalCopy.innerHTML = study.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("");
+                graphicModal.showModal();
+            });
+        });
+
+        document.querySelector(".campaign-modal-close").addEventListener("click", () => graphicModal.close());
+        graphicModal.addEventListener("click", (event) => {
+            if (event.target === graphicModal) {
+                graphicModal.close();
+            }
+        });
+    </script>
 </body>
 </html>

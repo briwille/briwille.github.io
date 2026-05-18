@@ -684,29 +684,21 @@ a {
     position: relative;
     display: grid;
     place-items: center;
-    flex: 0 0 clamp(44px, 5.8vw, 66px);
-    width: clamp(44px, 5.8vw, 66px);
-    height: clamp(44px, 5.8vw, 66px);
-    border: 2px solid rgba(68, 41, 34, 0.72);
-    border-radius: 50%;
-    overflow: hidden;
+    flex: 0 0 clamp(48px, 5.8vw, 68px);
+    width: clamp(48px, 5.8vw, 68px);
+    height: clamp(48px, 5.8vw, 68px);
+    color: var(--ink);
+    overflow: visible;
 }
 
 .contact-icon img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 112%;
-    height: 112%;
-    object-fit: contain;
-    object-position: center;
-    transform: translate(-50%, -50%);
+    display: none;
 }
 
-.email-card .contact-icon img,
-.phone-card .contact-icon img {
-    width: 118%;
-    height: 118%;
+.contact-icon svg {
+    display: grid;
+    width: clamp(31px, 4vw, 44px);
+    height: clamp(31px, 4vw, 44px);
 }
 
 .contact-details {
@@ -1188,23 +1180,6 @@ a {
     gap: clamp(20px, 4vw, 54px);
 }
 
-.case-study-feature h2,
-.case-label {
-    color: var(--ink);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1.3rem, 3vw, 2.3rem);
-    font-weight: 400;
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.case-study-feature h2 {
-    position: absolute;
-    left: 28%;
-    bottom: 72px;
-    margin: 0;
-}
-
 .browser-mockup {
     overflow: hidden;
     border-radius: 8px 8px 0 0;
@@ -1349,11 +1324,9 @@ a {
 }
 
 .espresso-divider img {
-    width: clamp(74px, 9vw, 120px);
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 0 6px rgba(255, 227, 231, 0.88);
+    width: clamp(110px, 14vw, 190px);
+    height: auto;
+    object-fit: contain;
 }
 
 .case-study-split {
@@ -1363,16 +1336,67 @@ a {
     min-height: 620px;
 }
 
-.case-label {
+.graphic-project-card {
+    z-index: 4;
+    display: grid;
+    gap: 7px;
+    width: min(390px, 86vw);
+    padding: clamp(16px, 2.4vw, 24px);
+    border: 1px solid rgba(68, 41, 34, 0.18);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--ink);
+    box-shadow: 12px 12px 0 rgba(255, 100, 191, 0.14);
+}
+
+.graphic-project-card p,
+.graphic-project-card h2 {
+    margin: 0;
+}
+
+.graphic-project-card p {
+    color: var(--pink);
+    font-family: "Belleza", Georgia, serif;
+    font-size: clamp(0.86rem, 1.5vw, 1.05rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.graphic-project-card h2 {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.1rem, 4.2vw, 4rem);
+    font-weight: 400;
+    line-height: 0.94;
+    text-transform: uppercase;
+}
+
+.graphic-project-card .case-study-button {
+    justify-self: start;
+    margin-top: 8px;
+}
+
+.cyclist-project-card {
     position: absolute;
-    top: 110px;
-    left: 19%;
+    left: clamp(22px, 18vw, 270px);
+    bottom: 42px;
+}
+
+.packaging-project-card {
+    position: absolute;
+    top: 70px;
+    left: clamp(22px, 8vw, 110px);
+}
+
+.brand-project-card {
+    position: absolute;
+    right: clamp(10px, 2vw, 28px);
+    bottom: 16px;
+    width: min(340px, 88%);
 }
 
 .small-browser {
     align-self: end;
     width: min(560px, 100%);
-    margin-top: 120px;
+    margin-top: 220px;
 }
 
 .small-browser .browser-art,
@@ -1387,9 +1411,9 @@ a {
 
 .brand-system-image {
     position: absolute;
-    top: 88px;
+    top: 48px;
     left: 10%;
-    width: min(520px, 88%);
+    width: min(440px, 82%);
     height: auto;
     filter: drop-shadow(16px 16px 0 rgba(68, 41, 34, 0.18));
 }
@@ -1437,6 +1461,160 @@ a {
     height: 100px;
 }
 
+.graphic-showcase {
+    gap: clamp(34px, 7vw, 84px);
+    width: min(1180px, calc(100% - 36px));
+    padding: 0 0 96px;
+}
+
+.graphic-project {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 68px);
+    padding: clamp(22px, 4vw, 46px);
+    border: 1px solid rgba(68, 41, 34, 0.12);
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 18px 18px 0 rgba(255, 100, 191, 0.12);
+}
+
+.graphic-project-cyclist {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.graphic-project-cyclist .graphic-project-card {
+    max-width: min(720px, 100%);
+    text-align: center;
+}
+
+.graphic-project-cyclist .case-study-button {
+    justify-self: center;
+}
+
+.graphic-project-cyclist .graphic-project-art {
+    width: 100%;
+}
+
+.graphic-project:nth-of-type(even) {
+    grid-template-columns: minmax(0, 1.18fr) minmax(260px, 0.82fr);
+}
+
+.graphic-project:nth-of-type(even) .graphic-project-card {
+    order: 2;
+}
+
+.graphic-project-card {
+    position: static;
+    width: 100%;
+    max-width: 430px;
+    align-self: center;
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.graphic-project-card span {
+    display: block;
+    color: rgba(68, 41, 34, 0.78);
+    font-family: "Belleza", Georgia, serif;
+    font-size: clamp(1rem, 1.8vw, 1.22rem);
+    line-height: 1.35;
+}
+
+.graphic-project-art {
+    position: relative;
+    display: grid;
+    min-width: 0;
+}
+
+.cyclist-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(150px, 230px);
+    align-items: end;
+    gap: clamp(14px, 2.6vw, 30px);
+}
+
+.cyclist-layout .cyclist-art,
+.cyclist-layout .cyclist-art img {
+    height: auto;
+    min-height: 0;
+}
+
+.cyclist-layout .cyclist-art {
+    display: grid;
+    place-items: center;
+}
+
+.cyclist-layout .cyclist-art img {
+    display: block;
+    object-fit: contain;
+    background: #fff;
+}
+
+.cyclist-layout .phone-mockup {
+    width: min(230px, 100%);
+    min-height: 430px;
+    margin: 0;
+}
+
+.cyclist-layout .phone-mockup img {
+    min-height: 430px;
+}
+
+.single-art {
+    justify-items: center;
+}
+
+.single-art .small-browser {
+    width: min(650px, 100%);
+    margin-top: 0;
+}
+
+.single-art .browser-art,
+.single-art .browser-art img {
+    min-height: clamp(260px, 31vw, 370px);
+}
+
+.brand-art {
+    padding: clamp(16px, 3vw, 30px);
+    background: rgba(255, 255, 255, 0.64);
+}
+
+.brand-art .brand-system-image {
+    position: static;
+    display: block;
+    width: min(640px, 100%);
+    height: auto;
+    filter: drop-shadow(18px 18px 0 rgba(68, 41, 34, 0.16));
+}
+
+@media (max-width: 900px) {
+    .graphic-project,
+    .graphic-project:nth-of-type(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .graphic-project:nth-of-type(even) .graphic-project-card {
+        order: 0;
+    }
+
+    .graphic-project-card {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .graphic-project-card .case-study-button {
+        justify-self: center;
+    }
+
+    .cyclist-layout {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .cyclist-layout .phone-mockup {
+        width: min(230px, 72vw);
+    }
+}
+
 @media (max-width: 680px) {
     .upload-work {
         grid-template-columns: 1fr;
@@ -1461,11 +1639,18 @@ a {
         padding: 22px 18px 46px;
     }
 
-    .case-study-feature h2,
-    .case-label {
+    .graphic-project-card,
+    .cyclist-project-card,
+    .packaging-project-card,
+    .brand-project-card {
         position: static;
-        margin: 26px 0 0;
+        width: min(100%, 430px);
+        margin: 24px auto 0;
         text-align: center;
+    }
+
+    .graphic-project-card .case-study-button {
+        justify-self: center;
     }
 
     .phone-mockup {
@@ -1484,6 +1669,13 @@ a {
 
     .small-browser {
         margin-top: 24px;
+    }
+
+    .brand-system-image {
+        position: static;
+        display: block;
+        width: min(100%, 430px);
+        margin: 20px auto 0;
     }
 
     .brand-board {
