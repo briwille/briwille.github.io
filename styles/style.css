@@ -1378,13 +1378,14 @@ a {
 .espresso-divider {
     display: grid;
     place-items: center;
-    height: clamp(150px, 16vw, 220px);
+    height: clamp(180px, 22vw, 280px);
     background: var(--ink);
 }
 
 .espresso-divider img {
-    width: clamp(180px, 24vw, 330px);
-    height: auto;
+    width: auto;
+    max-width: min(46vw, 380px);
+    max-height: calc(100% - 32px);
     object-fit: contain;
 }
 
@@ -1723,7 +1724,7 @@ a {
     }
 
     .espresso-divider {
-        height: 48px;
+        height: 120px;
     }
 
     .small-browser {
