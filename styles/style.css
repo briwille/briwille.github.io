@@ -498,6 +498,60 @@ a {
     object-fit: cover;
 }
 
+.campaign-work-collage {
+    display: grid;
+    grid-template-columns: 1fr 0.92fr;
+    grid-template-rows: 0.92fr 1.08fr;
+    gap: clamp(12px, 2vw, 22px);
+    width: 100%;
+    aspect-ratio: 0.72;
+    padding: clamp(24px, 4.5vw, 54px);
+    background:
+        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.68), transparent 32%),
+        linear-gradient(145deg, #ffd9ec 0%, #ffe9f3 54%, #ffd1e8 100%);
+    overflow: hidden;
+}
+
+.campaign-work-collage img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    border: 6px solid rgba(255, 255, 255, 0.86);
+    box-shadow: 10px 14px 24px rgba(68, 41, 34, 0.16);
+    transition: transform 180ms ease;
+}
+
+.campaign-work-collage img:nth-child(1) {
+    grid-row: span 2;
+    height: 86%;
+    align-self: center;
+    transform: rotate(-2deg);
+    transform-origin: center;
+    object-position: center;
+}
+
+.campaign-work-collage img:nth-child(2) {
+    align-self: start;
+    transform: rotate(2deg);
+    object-position: center;
+}
+
+.campaign-work-collage img:nth-child(3) {
+    align-self: end;
+    transform: translateX(-10%) rotate(-1deg);
+    object-position: center;
+}
+
+.campaign-work-collage img:nth-child(4) {
+    display: none;
+}
+
+.work-card:hover .campaign-work-collage img,
+.work-card:focus-within .campaign-work-collage img {
+    transform: translateY(-3px) rotate(0deg);
+}
+
 .work-card a {
     display: inline-block;
     margin-top: 10px;
