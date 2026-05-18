@@ -31,7 +31,10 @@
                 <div>
                     <p>Integrated Campaign</p>
                     <h2>FFEN Set Sail Campaign</h2>
-                    <a href="files/ffen-set-sail-campaign.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                    <div class="campaign-actions">
+                        <a href="files/ffen-set-sail-campaign.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                        <button type="button" data-case-study="ffen">Case Study</button>
+                    </div>
                 </div>
             </article>
 
@@ -39,8 +42,11 @@
                 <img src="images/campaign-state-speed-cover.png" alt="State of Speed campaign presentation cover">
                 <div>
                     <p>Sports Campaign</p>
-                    <h2>State of Speed</h2>
-                    <a href="files/state-of-speed.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                    <h2>Minnesota Wild Theme Night</h2>
+                    <div class="campaign-actions">
+                        <a href="files/state-of-speed.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                        <button type="button" data-case-study="wild">Case Study</button>
+                    </div>
                 </div>
             </article>
 
@@ -49,7 +55,10 @@
                 <div>
                     <p>Social Media Plan</p>
                     <h2>Groveland Tap</h2>
-                    <a href="files/groveland-tap-social-media.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                    <div class="campaign-actions">
+                        <a href="files/groveland-tap-social-media.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                        <button type="button" data-case-study="groveland">Case Study</button>
+                    </div>
                 </div>
             </article>
 
@@ -58,10 +67,78 @@
                 <div>
                     <p>Advertising Book</p>
                     <h2>Maxfield Book</h2>
-                    <a href="files/maxfield-book.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                    <div class="campaign-actions">
+                        <a href="files/maxfield-book.pdf" target="_blank" rel="noopener">View Slideshow</a>
+                        <button type="button" data-case-study="maxfield">Case Study</button>
+                    </div>
                 </div>
             </article>
         </section>
     </main>
+
+    <dialog class="campaign-modal" aria-labelledby="campaign-modal-title">
+        <button class="campaign-modal-close" type="button" aria-label="Close case study">×</button>
+        <h2 id="campaign-modal-title"></h2>
+        <div id="campaign-modal-copy"></div>
+    </dialog>
+
+    <script>
+        const caseStudies = {
+            ffen: {
+                title: "FFEN Campaign Case Study",
+                paragraphs: [
+                    "For this project, my team created an integrated campaign for the nonprofit organization Foundation for Essential Needs (FFEN) called “Set Sail to Serve Others.” The campaign focused on increasing awareness of FFEN’s mission to help food shelves across Minnesota become more organized, welcoming, and efficient.",
+                    "My main role was designing the social media mockups and creating concepts for the radio and video advertisements. I designed Instagram and LinkedIn ads, volunteer spotlight graphics, and before-and-after transformation visuals while maintaining a consistent nautical-themed brand identity throughout the campaign.",
+                    "This project strengthened my skills in branding, social media design, advertising strategy, and collaborative campaign development for a real-world nonprofit client."
+                ]
+            },
+            wild: {
+                title: "Minnesota Wild Theme Night Campaign",
+                paragraphs: [
+                    "For this project, I created a full theme night concept for the Minnesota Wild called “State of Speed,” an automotive-inspired game night designed to increase attendance, fan engagement, sponsorship opportunities, and revenue. My role in this project was developing the entire campaign concept and creating all of the mockups featured throughout the presentation.",
+                    "The event combined hockey culture with Minnesota’s strong automotive community through interactive experiences like Toyota vehicle showcases, racing-themed arena visuals, driving simulators, themed merchandise, fan contests, and social media activations using #StateofSpeed.",
+                    "I created all campaign visuals, including social media graphics, digital billboards, email promotions, in-arena activations, merchandise concepts, and sponsorship integrations with Toyota. I also developed audience research, marketing strategies, and promotional tactics focused on both automotive enthusiasts and family experience seekers.",
+                    "This project strengthened my skills in sports marketing, branding, audience targeting, sponsorship strategy, and campaign design while allowing me to create a fully developed professional theme night experience from start to finish."
+                ]
+            },
+            groveland: {
+                title: "Groveland Tap Social Media Strategy Case Study",
+                paragraphs: [
+                    "For this project, I worked collaboratively to develop and present a complete social media marketing strategy for Groveland Tap, a neighborhood restaurant and bar in St. Paul. My role included conducting a social media audit, researching competitors, developing content strategies, creating social media mockups, and contributing to the final client presentation.",
+                    "Using industry-standard social media marketing practices, our team analyzed engagement metrics across Instagram and Facebook to identify strengths, weaknesses, and growth opportunities. We created SMART goals focused on increasing engagement, improving follower growth, and shifting content toward more organic photography and video formats.",
+                    "I helped design branded content examples including Instagram stories, reels, influencer collaborations, and carousel posts tailored toward Groveland Tap’s primary audiences, including college students, local foodies, and craft beer consumers. The visual strategy emphasized authentic photography, community engagement, and interactive content to strengthen the restaurant’s online presence and brand identity.",
+                    "Through this project, I strengthened my skills in social media analytics, strategic communication, audience targeting, content creation, and professional client presentation development."
+                ]
+            },
+            maxfield: {
+                title: "Maxfield Elementary Campaign Case Study",
+                paragraphs: [
+                    "For this campaign project, I worked with a team to create a communication campaign for Maxfield Elementary focused on recruiting enrichment cluster leaders and increasing awareness of the program. The campaign targeted the Rondo community, University of St. Thomas students, and Maxfield parents.",
+                    "My role focused on designing several campaign deliverables, including the Rondo menu advertisement, digital billboard concepts, parent email, and informational trifold brochure. I worked to create visually engaging pieces that followed a consistent brand identity through typography, color palettes, imagery, and layout design.",
+                    "Throughout the project, I revised designs based on team collaboration, critiques, and client feedback to improve clarity and professionalism. This project strengthened my skills in campaign branding, audience-focused communication, and collaborative design while giving me experience creating materials for a real community outreach campaign."
+                ]
+            }
+        };
+
+        const modal = document.querySelector(".campaign-modal");
+        const modalTitle = document.querySelector("#campaign-modal-title");
+        const modalCopy = document.querySelector("#campaign-modal-copy");
+
+        document.querySelectorAll("[data-case-study]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const caseStudy = caseStudies[button.dataset.caseStudy];
+                modalTitle.textContent = caseStudy.title;
+                modalCopy.innerHTML = caseStudy.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("");
+                modal.showModal();
+            });
+        });
+
+        document.querySelector(".campaign-modal-close").addEventListener("click", () => modal.close());
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.close();
+            }
+        });
+    </script>
 </body>
 </html>

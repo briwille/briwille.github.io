@@ -1045,11 +1045,19 @@ a {
     text-transform: uppercase;
 }
 
-.campaign-card a {
+.campaign-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    padding: 0;
+}
+
+.campaign-card a,
+.campaign-card button {
     display: inline-grid;
     place-items: center;
     justify-self: start;
-    min-width: 230px;
     min-height: 54px;
     margin-top: 6px;
     padding: 10px 24px;
@@ -1066,11 +1074,84 @@ a {
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
+.campaign-card a {
+    min-width: 230px;
+}
+
+.campaign-card button {
+    min-width: 148px;
+    background: var(--soft-pink);
+    color: var(--ink);
+    cursor: pointer;
+}
+
 .campaign-card a:hover,
-.campaign-card a:focus-visible {
+.campaign-card a:focus-visible,
+.campaign-card button:hover,
+.campaign-card button:focus-visible {
     background: var(--soft-pink);
     color: var(--ink);
     transform: translateY(-2px);
+}
+
+.campaign-card button:hover,
+.campaign-card button:focus-visible {
+    background: #fff;
+    color: var(--pink);
+}
+
+.campaign-modal {
+    width: min(980px, calc(100vw - 34px));
+    max-height: min(760px, calc(100vh - 34px));
+    padding: clamp(28px, 5vw, 58px);
+    border: 1px solid rgba(68, 41, 34, 0.24);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 227, 231, 0.9)),
+        url("../images/whitebackground.webp") center / cover;
+    color: var(--ink);
+    box-shadow: 0 26px 80px rgba(68, 41, 34, 0.32);
+}
+
+.campaign-modal::backdrop {
+    background: rgba(68, 41, 34, 0.36);
+    backdrop-filter: blur(9px);
+}
+
+.campaign-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(68, 41, 34, 0.24);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--ink);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.campaign-modal h2 {
+    margin: 0 48px 22px 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.7rem, 6vw, 5.8rem);
+    font-weight: 400;
+    line-height: 0.92;
+    text-transform: uppercase;
+}
+
+.campaign-modal p {
+    margin: 0;
+    font-size: clamp(1.02rem, 1.8vw, 1.22rem);
+    line-height: 1.5;
+}
+
+.campaign-modal p + p {
+    margin-top: 16px;
 }
 
 .graphic-design-page {
@@ -1584,8 +1665,8 @@ a {
 
 .social-media-page {
     min-height: 100vh;
-    background-color: #fff;
-    background-image: radial-gradient(rgba(68, 41, 34, 0.16) 2px, transparent 2px);
+    background-color: var(--soft-pink);
+    background-image: radial-gradient(rgba(255, 100, 191, 0.22) 2px, transparent 2px);
     background-size: 34px 34px;
 }
 
@@ -1734,16 +1815,48 @@ a {
     margin: 0 0 clamp(22px, 4vw, 38px);
 }
 
+.social-project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(58px, 8vw, 96px) clamp(42px, 6vw, 82px);
+    align-items: start;
+    width: min(1120px, 94vw);
+    margin: 0 auto;
+}
+
 .social-more-examples {
     display: grid;
     justify-items: center;
     gap: clamp(22px, 4vw, 38px);
-    width: min(1060px, 94vw);
+    width: 100%;
     margin-top: clamp(66px, 9vw, 112px);
 }
 
+.social-project-grid .social-more-examples {
+    margin-top: 0;
+}
+
+.social-project-grid .social-carousel {
+    width: 100%;
+    max-width: 540px;
+}
+
+.social-project-grid .carousel-frame {
+    width: min(430px, 78%);
+}
+
+.social-project-grid .case-study-panel {
+    width: min(430px, 88%);
+}
+
 .social-more-examples h2 {
+    display: grid;
+    place-items: center;
+    min-height: clamp(170px, 17vw, 240px);
     margin: 0;
+    max-width: 100%;
+    font-size: clamp(2.7rem, 4.4vw, 4.8rem);
+    overflow-wrap: break-word;
 }
 
 .case-study-panel {
@@ -1753,6 +1866,39 @@ a {
     margin-top: 24px;
     color: var(--ink);
     text-align: left;
+}
+
+.case-study-button {
+    display: inline-grid;
+    place-items: center;
+    min-height: 44px;
+    margin-top: 24px;
+    padding: 9px 22px;
+    border: 1px solid var(--pink);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--pink);
+    cursor: pointer;
+    font-family: "Belleza", Georgia, serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 10px 22px rgba(255, 100, 191, 0.12);
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.case-study-button::after {
+    content: "+";
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.case-study-button:hover,
+.case-study-button:focus-visible {
+    background: var(--soft-pink);
+    color: var(--ink);
+    transform: translateY(-2px);
 }
 
 .case-study-panel summary {
@@ -1845,6 +1991,12 @@ a {
 
 .brower-examples {
     margin-top: clamp(54px, 8vw, 96px);
+}
+
+@media (max-width: 900px) {
+    .social-project-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 620px) {
