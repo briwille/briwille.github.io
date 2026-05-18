@@ -500,61 +500,88 @@ a {
 
 .campaign-work-collage {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.48fr 1fr;
-    gap: clamp(10px, 1.6vw, 16px);
+    display: block;
     width: 100%;
     aspect-ratio: 0.72;
-    padding: clamp(18px, 3vw, 34px);
+    padding: clamp(14px, 2.6vw, 28px);
     background:
-        radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.78), transparent 34%),
-        linear-gradient(145deg, #ffd9ec 0%, #fff1f7 52%, #ffd2e9 100%);
+        linear-gradient(rgba(255, 214, 234, 0.1), rgba(255, 214, 234, 0.1)),
+        url("../images/campaign-editorial-bg.png") center / cover no-repeat;
     overflow: hidden;
 }
 
-.campaign-work-collage img {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: auto;
-    object-fit: cover;
-    border: 5px solid rgba(255, 255, 255, 0.94);
-    background: #fff;
-    box-shadow: 8px 11px 20px rgba(68, 41, 34, 0.14);
-    transition: transform 180ms ease;
-}
-
-.campaign-work-collage img:nth-child(1) {
-    grid-column: 1 / -1;
-    object-fit: cover;
-    object-position: center 62%;
-    transform: rotate(-1deg);
-    transform-origin: center;
-}
-
-.campaign-work-collage img:nth-child(2) {
-    transform: rotate(1.4deg);
-    object-position: center top;
-}
-
-.campaign-work-collage img:nth-child(3) {
-    transform: rotate(-1.2deg);
-    object-position: center;
-}
-
-.campaign-work-collage img:nth-child(4) {
+.campaign-extra,
+.campaign-studio,
+.campaign-ticker {
     position: absolute;
-    right: clamp(12px, 2vw, 22px);
-    bottom: clamp(12px, 2vw, 22px);
-    width: 42%;
-    height: 34%;
-    object-position: center top;
-    transform: rotate(2deg);
+    z-index: 4;
+    display: block;
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
 }
 
-.work-card:hover .campaign-work-collage img,
-.work-card:focus-within .campaign-work-collage img {
-    transform: translateY(-3px) rotate(0deg);
+.campaign-extra {
+    top: 7.5%;
+    left: -6%;
+    width: 112%;
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--ink);
+    color: rgba(68, 41, 34, 0.82);
+    font-size: clamp(0.9rem, 2.4vw, 1.65rem);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.campaign-work-collage strong {
+    position: absolute;
+    top: 34%;
+    left: 6%;
+    z-index: 4;
+    color: var(--pink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2.2rem, 6.4vw, 4.7rem);
+    font-weight: 900;
+    line-height: 0.82;
+    text-transform: uppercase;
+}
+
+.campaign-work-collage em {
+    position: absolute;
+    top: 44%;
+    left: 28%;
+    z-index: 5;
+    color: var(--pink);
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(1.7rem, 5.4vw, 4rem);
+    font-style: normal;
+    line-height: 0.8;
+    transform: rotate(-5deg);
+}
+
+.campaign-studio {
+    top: 58%;
+    left: 0;
+    width: 100%;
+    padding: 7px 0;
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    font-size: clamp(0.65rem, 1.4vw, 0.95rem);
+    text-align: center;
+}
+
+.campaign-ticker {
+    left: 0;
+    bottom: 7%;
+    width: 100%;
+    padding: 8px 0;
+    background: var(--ink);
+    color: #fff;
+    font-size: clamp(0.82rem, 1.8vw, 1.2rem);
+    letter-spacing: 0.12em;
+    white-space: nowrap;
 }
 
 .work-card a {
