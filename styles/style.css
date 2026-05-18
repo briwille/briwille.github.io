@@ -1319,12 +1319,12 @@ a {
 .espresso-divider {
     display: grid;
     place-items: center;
-    height: 76px;
+    height: clamp(150px, 16vw, 220px);
     background: var(--ink);
 }
 
 .espresso-divider img {
-    width: clamp(110px, 14vw, 190px);
+    width: clamp(180px, 24vw, 330px);
     height: auto;
     object-fit: contain;
 }
