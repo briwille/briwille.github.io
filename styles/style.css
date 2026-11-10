@@ -3375,3 +3375,317 @@ a {
         margin: 0 auto;
     }
 }
+
+/* ==========================================================
+   Homepage: professional hero, services, work, about
+   ========================================================== */
+
+.hero-pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    min-height: clamp(520px, 62vw, 720px);
+    padding: 80px 18px 72px;
+    text-align: center;
+}
+
+.hero-pro .hero-signature {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+}
+
+.hero-role {
+    position: relative;
+    z-index: 2;
+    margin: clamp(18px, 2.4vw, 30px) 0 0;
+    color: var(--pink);
+    font-size: clamp(0.95rem, 1.8vw, 1.35rem);
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.hero-lede {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+    margin: 14px 0 0;
+    font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+    line-height: 1.55;
+}
+
+.hero-cta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 26px;
+    margin-top: 30px;
+}
+
+.hero-cta a,
+.about-teaser .about-cta-primary {
+    font-size: 0.92rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.hero-cta-secondary {
+    color: var(--ink);
+}
+
+.hero-cta-secondary::after {
+    content: "\2192";
+    margin-left: 8px;
+    color: var(--pink);
+}
+
+.hero-cta-secondary:hover,
+.hero-cta-secondary:focus-visible {
+    color: var(--pink);
+}
+
+.services-pro,
+.work-pro,
+.about-teaser {
+    padding: clamp(64px, 9vw, 104px) 18px;
+    background-color: #fdf1f4;
+    background-image: radial-gradient(rgba(255, 100, 191, 0.12) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+}
+
+.services-pro {
+    padding-bottom: 0;
+}
+
+.services-tagline {
+    margin: 0 auto clamp(32px, 5vw, 52px);
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.05;
+    text-align: center;
+}
+
+.services-tagline em {
+    color: var(--pink);
+}
+
+.services-grid,
+.work-pro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 2.6vw, 30px);
+    width: min(1120px, 100%);
+    margin: 0 auto;
+}
+
+.service-card {
+    position: relative;
+    padding: clamp(24px, 3vw, 32px);
+    border: 1px solid rgba(68, 41, 34, 0.1);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(68, 41, 34, 0.04), 0 14px 34px rgba(68, 41, 34, 0.07);
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: clamp(24px, 3vw, 32px);
+    width: 44px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: var(--pink);
+}
+
+.service-card h3 {
+    margin: 0 0 10px;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(1.6rem, 2.3vw, 2rem);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.service-card p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.55;
+}
+
+.work-pro-header {
+    margin-bottom: clamp(30px, 5vw, 48px);
+    text-align: center;
+}
+
+.work-pro-header h2,
+.about-teaser h2 {
+    margin: 0;
+    color: var(--pink);
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 400;
+    line-height: 0.9;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgba(255, 155, 205, 0.9);
+    text-shadow: 5px 0 0 rgba(255, 85, 185, 0.3);
+}
+
+.work-pro-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(68, 41, 34, 0.1);
+    border-radius: 18px;
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(68, 41, 34, 0.04), 0 14px 34px rgba(68, 41, 34, 0.07);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.work-pro-card:hover,
+.work-pro-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 1px 2px rgba(68, 41, 34, 0.05), 0 22px 44px rgba(68, 41, 34, 0.12);
+}
+
+.work-pro-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 50% 0;
+    border-bottom: 1px solid rgba(68, 41, 34, 0.08);
+}
+
+.work-pro-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    padding: 22px 24px 24px;
+}
+
+.work-pro-title {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    line-height: 1.05;
+}
+
+.work-pro-summary {
+    font-size: 1.02rem;
+    line-height: 1.5;
+}
+
+.work-pro-link {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(68, 41, 34, 0.1);
+    font-size: 0.92rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.work-pro-link::after {
+    content: "\2192";
+    display: inline-block;
+    margin-left: 8px;
+    color: var(--pink);
+    transition: transform 180ms ease;
+}
+
+.work-pro-card:hover .work-pro-link,
+.work-pro-card:focus-visible .work-pro-link {
+    color: var(--pink);
+}
+
+.work-pro-card:hover .work-pro-link::after,
+.work-pro-card:focus-visible .work-pro-link::after {
+    transform: translateX(4px);
+}
+
+.work-pro {
+    padding-top: clamp(80px, 10vw, 120px);
+}
+
+.about-teaser {
+    padding-top: 0;
+}
+
+.about-teaser-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: clamp(36px, 6vw, 84px);
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding-top: clamp(64px, 9vw, 104px);
+    border-top: 1px solid rgba(68, 41, 34, 0.08);
+}
+
+.about-teaser-photo {
+    margin: 0;
+}
+
+.about-teaser-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border: 8px solid #fff;
+    border-radius: 18px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    box-shadow: 0 18px 44px rgba(68, 41, 34, 0.16);
+}
+
+.about-teaser h2 {
+    margin-bottom: 20px;
+}
+
+.about-teaser-copy p:not(.social-eyebrow) {
+    max-width: 520px;
+    margin: 0 0 14px;
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    line-height: 1.6;
+}
+
+.about-teaser .about-cta-primary {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+@media (max-width: 860px) {
+    .services-grid,
+    .work-pro-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+
+    .about-teaser-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .about-teaser-photo {
+        max-width: 440px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero-pro .hero-signature {
+        font-size: 4.35rem;
+    }
+
+    .hero-role {
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+    }
+}

@@ -10,9 +10,9 @@
 
     <meta property="og:title" content="Brianna Wille | Portfolio">
     <meta property="og:description" content="Explore the creative work and identity of Brianna Wille.">
-    <meta property="og:image" content="https://briannawille.github.io/images/brithumbnail.webp">
+    <meta property="og:image" content="https://briwille.github.io/images/brithumbnail.webp">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://briannawille.github.io/">
+    <meta property="og:url" content="https://briwille.github.io/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
     </nav>
 
     <main id="home">
-        <header class="hero">
+        <header class="hero hero-pro">
             <h1 class="hero-signature">
                 <span class="signature-text">BRI WILLE</span>
                 <span class="brand-confetti brand-pill brand-1" aria-hidden="true">Instagram</span>
@@ -40,68 +40,84 @@
                 <span class="brand-confetti brand-pill brand-7" aria-hidden="true">Adobe</span>
                 <span class="brand-confetti brand-pill brand-8" aria-hidden="true">X</span>
             </h1>
-            <p class="hero-portfolio">Portfolio</p>
+            <p class="hero-role">Social Media &middot; Graphic Design &middot; Branding</p>
+            <p class="hero-lede">Strategic visuals that communicate clearly and connect with audiences.</p>
+            <div class="hero-cta">
+                <a class="about-cta-primary" href="#work">View My Work</a>
+                <a class="hero-cta-secondary" href="#contact">Contact Me</a>
+            </div>
         </header>
 
-        <section class="intro-strip" aria-label="Introduction">
-            <div class="designer-info">
-                <div class="designer-badge" tabindex="0" aria-describedby="designer-definition">
-                    <span aria-hidden="true">⌕</span>
-                    <span>Designer</span>
+        <section class="services-pro" aria-labelledby="services-title">
+            <p class="services-tagline" id="services-title"><em>Social</em> media is <em>kinda</em> my <em>thing</em></p>
+            <div class="services-grid">
+                <article class="service-card">
+                    <span class="statement-number">01</span>
+                    <h3>Social Media</h3>
+                    <p>Scroll-stopping posts, carousels, and stories designed to build engagement and community.</p>
+                </article>
+                <article class="service-card">
+                    <span class="statement-number">02</span>
+                    <h3>Graphic Design</h3>
+                    <p>Packaging, identity systems, and web layouts built on clean hierarchy and consistent branding.</p>
+                </article>
+                <article class="service-card">
+                    <span class="statement-number">03</span>
+                    <h3>Campaigns &amp; Branding</h3>
+                    <p>Integrated campaigns that carry an idea from research and concept through final creative.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="work-pro" id="work" aria-labelledby="work-title">
+            <header class="work-pro-header">
+                <p class="social-eyebrow">Selected Work</p>
+                <h2 id="work-title">My Work</h2>
+            </header>
+            <div class="work-pro-grid">
+                <a class="work-pro-card" href="social-media.html">
+                    <img src="images/BriannaWork.webp" alt="Collage of Brianna's social media work">
+                    <span class="work-pro-body">
+                        <span class="project-type">6 Projects</span>
+                        <span class="work-pro-title">Social Media</span>
+                        <span class="work-pro-summary">Internship, client, and campaign content for brands, nonprofits, and athletics.</span>
+                        <span class="work-pro-link">View Work</span>
+                    </span>
+                </a>
+                <a class="work-pro-card" href="graphic-design.html">
+                    <img src="images/GraphicDesignPhoto.webp" alt="Newspaper-style graphic design collage">
+                    <span class="work-pro-body">
+                        <span class="project-type">3 Projects</span>
+                        <span class="work-pro-title">Graphic Design</span>
+                        <span class="work-pro-summary">Responsive web, packaging, and a full stationery identity system.</span>
+                        <span class="work-pro-link">View Work</span>
+                    </span>
+                </a>
+                <a class="work-pro-card" href="mock-up.html">
+                    <img src="images/campaign-state-speed-cover.png" alt="State of Speed Minnesota Wild campaign cover">
+                    <span class="work-pro-body">
+                        <span class="project-type">5 Projects</span>
+                        <span class="work-pro-title">Campaigns</span>
+                        <span class="work-pro-summary">Strategy decks and integrated campaigns for sports, nonprofits, and hospitality.</span>
+                        <span class="work-pro-link">View Work</span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section class="about-teaser" id="about" aria-labelledby="about-teaser-title">
+            <div class="about-teaser-inner">
+                <figure class="about-teaser-photo">
+                    <img src="images/aboutme-purple-dress.jpg" alt="Brianna smiling in a purple dress on a tree-lined sidewalk">
+                </figure>
+                <div class="about-teaser-copy">
+                    <p class="social-eyebrow">About Me</p>
+                    <h2 id="about-teaser-title">Hi, I’m Bri</h2>
+                    <p>I’m Brianna Wille, a designer focused on graphic design, social media, and branding, creating strategic visuals that communicate clearly and connect with audiences.</p>
+                    <p>When I’m not designing, you’ll find me at the gym, outdoors, or boating with family and friends.</p>
+                    <a class="about-cta-primary" href="about.html">More About Me</a>
                 </div>
-                <p class="designer-definition" id="designer-definition">
-                    I’m a designer focused on graphic design, social media, and branding, creating strategic visuals that communicate clearly and connect with audiences.
-                </p>
             </div>
-
-            <p class="tagline">
-                <strong>SOCIAL</strong> media is <strong>kinda</strong> my <strong>thing</strong>
-            </p>
-
-            <div class="social-icons">
-                <span aria-label="Instagram">
-                    <img src="images/instagramicon.webp" alt="">
-                </span>
-                <span aria-label="TikTok">
-                    <img src="images/tiktokicon.webp" alt="">
-                </span>
-                <a href="https://www.linkedin.com/in/brianna-wille-729944336" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                    <img src="images/linkedinicon.webp" alt="">
-                </a>
-                <a href="#" aria-label="Facebook">
-                    <img src="images/facebookicon.webp" alt="">
-                </a>
-                <a href="#" aria-label="Pinterest">
-                    <img src="images/pinteresticon.webp" alt="">
-                </a>
-            </div>
-        </section>
-
-        <section class="work-section" id="work">
-            <h2>My Work</h2>
-            <div class="work-grid">
-                <article class="work-card">
-                    <img src="images/BriannaWork.webp" alt="Social media work collage">
-                    <a href="social-media.html">Social Media</a>
-                </article>
-                <article class="work-card">
-                    <img src="images/GraphicDesignPhoto.webp" alt="Graphic design newspaper-style collage">
-                    <a href="graphic-design.html">Graphic Design</a>
-                </article>
-                <article class="work-card">
-                    <div class="campaign-work-collage" aria-label="Campaign design previews">
-                        <strong>Campaign</strong>
-                        <em>strategy</em>
-                    </div>
-                    <a href="mock-up.html">Campaigns</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="about-preview" id="about">
-            <h2>About Me</h2>
-            <img src="images/aboutme-purple-dress.jpg" alt="Brianna smiling in a purple dress on a tree-lined sidewalk" class="about-photo">
-            <a href="about.html" class="learn-more">Click To Learn More</a>
         </section>
 
         <section class="contact-pro" id="contact" aria-labelledby="contact-title">
