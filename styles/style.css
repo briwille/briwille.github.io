@@ -2712,3 +2712,160 @@ a {
         margin-left: 0;
     }
 }
+
+/* ==========================================================
+   Graphic Design page: professional card style (keeps layout)
+   ========================================================== */
+
+.graphic-pro {
+    background-color: #fdf1f4;
+    background-image: radial-gradient(rgba(255, 100, 191, 0.12) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+}
+
+.graphic-pro .portfolio-hero {
+    display: block;
+    min-height: 0;
+    width: min(1180px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 28px 0 clamp(40px, 6vw, 64px);
+}
+
+.graphic-pro .back-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto clamp(28px, 5vw, 52px) 0;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.graphic-pro .back-link:hover,
+.graphic-pro .back-link:focus-visible {
+    background: var(--pink);
+    color: #fff;
+}
+
+.graphic-pro .portfolio-hero h1 {
+    font-size: clamp(3.4rem, 9vw, 7.5rem);
+    text-shadow: 5px 0 0 rgba(255, 85, 185, 0.3);
+}
+
+.graphic-pro .graphic-showcase {
+    gap: clamp(26px, 4vw, 44px);
+    margin-bottom: 0;
+}
+
+.graphic-pro .graphic-project {
+    border: 1px solid rgba(68, 41, 34, 0.1);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(68, 41, 34, 0.04), 0 14px 34px rgba(68, 41, 34, 0.07);
+}
+
+.graphic-pro .graphic-project-card {
+    gap: 10px;
+    padding: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.graphic-pro .graphic-project-card .project-type {
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    line-height: 1.2;
+}
+
+.graphic-pro .graphic-project-card h2 {
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
+    line-height: 1.05;
+    text-transform: none;
+}
+
+.graphic-pro .graphic-project-card span {
+    color: var(--ink);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.graphic-pro .graphic-project-cyclist .project-tags {
+    justify-content: center;
+}
+
+.graphic-pro .case-study-button {
+    display: inline-block;
+    min-height: 0;
+    margin-top: 6px;
+    padding: 14px 0 0;
+    border: 0;
+    border-top: 1px solid rgba(68, 41, 34, 0.1);
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    color: var(--ink);
+    font-size: 0.92rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.graphic-pro .graphic-project-cyclist .case-study-button {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.graphic-pro .case-study-button::after {
+    content: "\2192";
+    margin-left: 8px;
+    color: var(--pink);
+    display: inline-block;
+    transition: transform 180ms ease;
+}
+
+.graphic-pro .case-study-button:hover,
+.graphic-pro .case-study-button:focus-visible {
+    background: none;
+    color: var(--pink);
+    transform: none;
+}
+
+.graphic-pro .case-study-button:hover::after,
+.graphic-pro .case-study-button:focus-visible::after {
+    transform: translateX(4px);
+}
+
+.graphic-pro .browser-mockup {
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 10px 28px rgba(68, 41, 34, 0.12);
+}
+
+.graphic-pro .phone-mockup {
+    box-shadow: 0 14px 30px rgba(68, 41, 34, 0.18);
+}
+
+.graphic-pro .brand-art {
+    border-radius: 12px;
+    background: #f7f3f2;
+}
+
+.graphic-pro .brand-art .brand-system-image {
+    filter: drop-shadow(0 12px 22px rgba(68, 41, 34, 0.14));
+}
+
+.graphic-pro ~ .campaign-modal {
+    width: min(760px, calc(100vw - 32px));
+    border: 0;
+    border-radius: 18px;
+    background: #fff;
+}
+
+.graphic-pro ~ .campaign-modal h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05;
+    text-transform: none;
+}
+
+.graphic-pro ~ .campaign-modal p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
