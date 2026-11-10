@@ -2261,3 +2261,272 @@ a {
         width: min(520px, 88vw);
     }
 }
+
+/* ==========================================================
+   Social Media page: professional layout
+   ========================================================== */
+
+.social-media-page {
+    background-color: #fdf1f4;
+    background-image: radial-gradient(rgba(255, 100, 191, 0.12) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+}
+
+.social-media-page .social-case-study {
+    display: block;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 28px clamp(16px, 4vw, 40px) 96px;
+    text-align: left;
+}
+
+.social-media-page .social-back-link {
+    position: static;
+    display: inline-block;
+    margin: 0;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.social-media-page .social-back-link:hover,
+.social-media-page .social-back-link:focus-visible {
+    background: var(--pink);
+    color: #fff;
+}
+
+.social-intro {
+    max-width: 780px;
+    margin: clamp(28px, 5vw, 56px) auto clamp(44px, 6vw, 72px);
+    text-align: center;
+}
+
+.social-eyebrow {
+    margin: 0 0 10px;
+    color: var(--pink);
+    font-size: 0.9rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.social-media-page .social-case-study h1 {
+    margin: 0;
+    font-size: clamp(3.4rem, 9vw, 7.5rem);
+    text-shadow: 5px 0 0 rgba(255, 85, 185, 0.3);
+}
+
+.social-lede {
+    max-width: 620px;
+    margin: 18px auto 0;
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    line-height: 1.55;
+}
+
+.social-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 10px;
+    margin: 26px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-skills li {
+    padding: 7px 14px;
+    border: 1px solid rgba(68, 41, 34, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.social-media-page .social-project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: clamp(22px, 3vw, 34px);
+    align-items: stretch;
+    width: 100%;
+}
+
+.social-project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(68, 41, 34, 0.1);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(68, 41, 34, 0.04), 0 14px 34px rgba(68, 41, 34, 0.07);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.social-project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1px 2px rgba(68, 41, 34, 0.05), 0 22px 44px rgba(68, 41, 34, 0.12);
+}
+
+.social-media-page .social-project-grid .social-carousel {
+    width: 100%;
+    max-width: none;
+    background: #f7f3f2;
+}
+
+.social-media-page .social-project-grid .carousel-frame {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: transparent;
+}
+
+.social-media-page .carousel-arrow {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 4px 14px rgba(68, 41, 34, 0.18);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    opacity: 0.85;
+}
+
+.social-media-page .carousel-prev {
+    left: 12px;
+}
+
+.social-media-page .carousel-next {
+    right: 12px;
+}
+
+.social-media-page .social-carousel:hover .carousel-arrow {
+    opacity: 1;
+}
+
+.carousel-counter {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 3;
+    margin: 0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(68, 41, 34, 0.72);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.social-project-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px 24px 24px;
+}
+
+.project-type {
+    margin: 0;
+    color: var(--pink);
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.social-media-page .social-project-body h2 {
+    display: block;
+    min-height: 0;
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(1.7rem, 2.4vw, 2.1rem);
+    line-height: 1.05;
+    text-transform: none;
+}
+
+.project-summary {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tags li {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--soft-pink);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+.social-media-page .case-study-button {
+    align-self: flex-start;
+    min-height: 0;
+    margin-top: auto;
+    padding: 14px 0 0;
+    border: 0;
+    border-top: 1px solid rgba(68, 41, 34, 0.1);
+    border-radius: 0;
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    color: var(--ink);
+    font-size: 0.92rem;
+    letter-spacing: 0.1em;
+    text-align: left;
+    white-space: nowrap;
+    display: block;
+}
+
+.social-media-page .case-study-button::after {
+    content: "\2192";
+    margin-left: 8px;
+    color: var(--pink);
+    display: inline-block;
+    transition: transform 180ms ease;
+}
+
+.social-media-page .case-study-button:hover,
+.social-media-page .case-study-button:focus-visible {
+    background: none;
+    color: var(--pink);
+    transform: none;
+}
+
+.social-media-page .case-study-button:hover::after,
+.social-media-page .case-study-button:focus-visible::after {
+    transform: translateX(4px);
+}
+
+.social-media-page ~ .campaign-modal {
+    width: min(760px, calc(100vw - 32px));
+    border: 0;
+    border-radius: 18px;
+    background: #fff;
+}
+
+.social-media-page ~ .campaign-modal h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05;
+    text-transform: none;
+}
+
+.social-media-page ~ .campaign-modal p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+@media (max-width: 620px) {
+    .social-media-page .social-back-link {
+        margin: 0;
+    }
+
+    .social-media-page .social-project-grid {
+        grid-template-columns: 1fr;
+    }
+}
