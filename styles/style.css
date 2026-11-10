@@ -3689,3 +3689,25 @@ a {
         white-space: nowrap;
     }
 }
+
+/* Contact: copy email button */
+.contact-copy {
+    padding: 0.85em 1.6em;
+    border: 1.5px solid var(--pink);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--pink);
+    font: inherit;
+    font-size: 0.92rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.contact-copy:hover,
+.contact-copy:focus-visible,
+.contact-copy.is-copied {
+    background: var(--pink);
+    color: #fff;
+}

@@ -129,7 +129,7 @@
 
                     <ul class="contact-pro-list">
                         <li>
-                            <a href="mailto:briwille2@gmail.com">
+                            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=briwille2@gmail.com&amp;su=Portfolio%20Inquiry" target="_blank" rel="noopener">
                                 <span class="contact-pro-icon" aria-hidden="true">
                                     <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m3.5 6.5 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </span>
@@ -164,7 +164,8 @@
                     </ul>
 
                     <div class="contact-pro-actions">
-                        <a class="about-cta-primary" href="mailto:briwille2@gmail.com">Email Me</a>
+                        <a class="about-cta-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=briwille2@gmail.com&amp;su=Portfolio%20Inquiry" target="_blank" rel="noopener">Email Me</a>
+                        <button type="button" class="contact-copy" data-copy-email="briwille2@gmail.com">Copy Email</button>
                         <p class="contact-pro-signoff">Thanks for visiting!</p>
                     </div>
                 </div>
@@ -175,5 +176,22 @@
             </div>
         </section>
     </main>
+    <script>
+        document.querySelectorAll('[data-copy-email]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var email = btn.getAttribute('data-copy-email');
+                var done = function () {
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('is-copied');
+                    setTimeout(function () { btn.textContent = 'Copy Email'; btn.classList.remove('is-copied'); }, 2000);
+                };
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(email).then(done, function () { window.prompt('Copy my email:', email); });
+                } else {
+                    window.prompt('Copy my email:', email);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
