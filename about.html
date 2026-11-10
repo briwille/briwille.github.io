@@ -19,33 +19,89 @@
         <a href="index.html#contact">Contact</a>
     </nav>
 
-    <main class="about-page">
-        <section class="about-page-hero" aria-labelledby="about-title">
-            <div class="about-photo-stack">
-                <a class="back-link about-back-link" href="index.html#about">Back Home</a>
-                <img src="images/briwithclip.webp" alt="Brianna clipped photo" class="about-stack-photo about-photo-one">
-                <img src="images/aboutmephoto.png" alt="Brianna smiling at night" class="about-stack-photo about-photo-two">
-            </div>
-
-            <div class="about-title-block">
+    <main class="about-pro">
+        <section class="about-hero" aria-labelledby="about-title">
+            <div class="about-hero-copy">
+                <a class="back-link" href="index.html#about">&larr; Back Home</a>
+                <p class="social-eyebrow">Designer &middot; Social Media &middot; Branding</p>
                 <h1 id="about-title">About Me</h1>
-                <div class="bio-copy">
+                <div class="about-bio">
                     <p>Hey! I’m Brianna Wille. I love staying active and spending time with the people I care about most. Some of my favorite things to do are going to the gym, hanging out with family and friends, being outdoors, and spending time boating in the summer.</p>
                     <p>A few fun facts about me: my favorite food is dark chocolate, and I absolutely love the color pink, which you can probably already tell!</p>
-                    <p>Thanks for checking out my portfolio — I hope you enjoy exploring my work and getting to know me a little better!</p>
+                    <p>Thanks for checking out my portfolio. I hope you enjoy exploring my work and getting to know me a little better!</p>
                 </div>
+                <div class="about-cta">
+                    <a class="about-cta-primary" href="index.html#work">See My Work</a>
+                    <a class="about-cta-secondary" href="index.html#contact">Get In Touch</a>
+                </div>
+            </div>
+
+            <div class="about-hero-photos">
+                <img src="images/about-campus-friends.jpg" alt="Brianna and a friend in purple dresses holding hands on the St. Thomas campus" class="about-hero-main">
+                <img src="images/about-friends-house.jpg" alt="Brianna with three friends outside a house" class="about-hero-accent">
             </div>
         </section>
 
-        <section class="artist-statement">
-            <h2>Artist Statement</h2>
-            <div class="artist-statement-copy">
-                <p>My work explores the evolving world of digital marketing and visual communication, where graphic design and social media intersect with creativity and strategy. I am drawn to the way digital art shapes how people perceive brands, trends, and messages in everyday life. I aim to create visuals that are engaging, intentional, and emotionally resonant with audiences while balancing artistic expression with clear communication.</p>
-                <p>My creative practice spans a range of digital media, including digital illustration, photography, video, and graphic design. I enjoy experimenting with different styles and allowing each project to develop its own visual identity. Much of my work leans toward futuristic and surreal aesthetics because I am inspired by the energy, emotion, and imagination they communicate. I enjoy creating visuals that feel bold, immersive, and slightly unreal, using high-energy compositions and bright color palettes to capture attention and leave a lasting impression. At the same time, I also explore minimalist design, focusing on clean lines, simplicity, and clarity to communicate ideas in a more subtle and refined way.</p>
-                <p>The meaning behind my work centers on connection and impact. Whether I am designing social media graphics, illustrations, branding materials, or digital campaigns, my goal is to create work that captures attention while delivering a clear message. Designing allows me to combine creativity with purpose, blending visual storytelling and strategy to connect with audiences in meaningful ways. Through my portfolio, I hope to showcase my versatility as a digital artist and my passion for creating thoughtful, engaging, and visually compelling design experiences.</p>
+        <section class="about-statement" aria-labelledby="statement-title">
+            <header class="about-statement-header">
+                <p class="social-eyebrow">How I Think About Design</p>
+                <h2 id="statement-title">Artist Statement</h2>
+            </header>
+
+            <div class="statement-grid">
+                <article class="statement-card statement-a reveal">
+                    <span class="statement-number">01</span>
+                    <h3>What Drives Me</h3>
+                    <p>My work explores the evolving world of digital marketing and visual communication, where graphic design and social media intersect with creativity and strategy. I am drawn to the way digital art shapes how people perceive brands, trends, and messages in everyday life. I aim to create visuals that are engaging, intentional, and emotionally resonant while balancing artistic expression with clear communication.</p>
+                </article>
+
+                <figure class="statement-photo statement-p1 reveal">
+                    <img src="images/about-ballpark-camera.jpg" alt="View from the field at a night baseball game with a camera in the foreground">
+                </figure>
+
+                <article class="statement-card statement-b reveal">
+                    <span class="statement-number">02</span>
+                    <h3>My Mediums</h3>
+                    <p>My creative practice spans digital illustration, photography, video, and graphic design. I enjoy experimenting with different styles and allowing each project to develop its own visual identity.</p>
+                </article>
+
+                <article class="statement-card statement-c reveal">
+                    <span class="statement-number">03</span>
+                    <h3>My Style</h3>
+                    <p>Much of my work leans toward futuristic and surreal aesthetics: bold, immersive, high-energy compositions with bright color palettes that capture attention. I also explore minimalist design, using clean lines and simplicity to communicate ideas in a more subtle, refined way.</p>
+                </article>
+
+                <figure class="statement-photo statement-p2 reveal">
+                    <img src="images/about-fireworks-team.jpg" alt="Brianna with a group of teammates on a ballpark field under fireworks">
+                </figure>
+
+                <article class="statement-card statement-d reveal">
+                    <span class="statement-number">04</span>
+                    <h3>Why It Matters</h3>
+                    <p>The meaning behind my work centers on connection and impact. Whether I am designing social media graphics, illustrations, branding materials, or digital campaigns, my goal is to create work that captures attention while delivering a clear message. Designing lets me blend visual storytelling and strategy to connect with audiences in meaningful ways.</p>
+                    <p class="statement-closing">Through my portfolio, I hope to showcase my versatility as a digital artist and my passion for creating thoughtful, engaging, and visually compelling design experiences.</p>
+                </article>
             </div>
-            <img src="images/photocal.webp" alt="Photo collage of Brianna's favorite things" class="artist-photo-collage">
         </section>
     </main>
+
+    <script>
+        (() => {
+            const items = document.querySelectorAll(".about-pro .reveal");
+            if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                return;
+            }
+            document.documentElement.classList.add("reveal-ready");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            items.forEach((item) => observer.observe(item));
+        })();
+    </script>
 </body>
 </html>
