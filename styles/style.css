@@ -3691,7 +3691,7 @@ a {
 }
 
 /* Contact: copy email button */
-.contact-copy {
+.contact-copy-email {
     padding: 0.85em 1.6em;
     border: 1.5px solid var(--pink);
     border-radius: 999px;
@@ -3705,9 +3705,9 @@ a {
     transition: background-color 180ms ease, color 180ms ease;
 }
 
-.contact-copy:hover,
-.contact-copy:focus-visible,
-.contact-copy.is-copied {
+.contact-copy-email:hover,
+.contact-copy-email:focus-visible,
+.contact-copy-email.is-copied {
     background: var(--pink);
     color: #fff;
 }
